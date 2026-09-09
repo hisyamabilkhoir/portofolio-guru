@@ -4031,8 +4031,9 @@ button {
 /* ==================== SECTION 03: EDUCATION & PERSONAL ACHIEVEMENTS ==================== */
 .education-section {
   padding: 100px 0 110px;
-  background-color: #F8F5EE; /* Warm paper / ivory parchment */
+  background-color: #ECE5DA; /* Warm beige / light brown editorial paper tone */
   border-top: 1px solid var(--border-light);
+  border-bottom: 1px solid var(--border-light);
   position: relative;
   overflow: hidden;
   scroll-margin-top: 85px;
@@ -4136,8 +4137,8 @@ button {
   height: 10px;
   border-radius: 50%;
   background-color: #8C6239;
-  border: 2px solid #F8F5EE;
-  box-shadow: 0 0 0 1.5px #BFA890;
+  border: 2px solid #ECE5DA;
+  box-shadow: 0 0 0 1.5px #A07248;
   margin-top: 18px;
   flex-shrink: 0;
   z-index: 3;
@@ -4152,27 +4153,26 @@ button {
   display: flex;
   align-items: center;
   gap: 14px;
-  box-shadow: 0 2px 6px rgba(28, 27, 24, 0.02);
+  box-shadow: 0 2px 6px rgba(28, 27, 24, 0.03);
   transition: all var(--transition-normal);
 }
 
 .edu-card:hover {
   transform: translateY(-2px);
-  border-color: #DFD5C6;
-  box-shadow: 0 8px 18px rgba(28, 27, 24, 0.05);
+  border-color: #C8B59E;
+  box-shadow: 0 8px 18px rgba(140, 98, 57, 0.08);
 }
 
 .edu-card-icon-wrap {
-  width: 44px;
-  height: 44px;
-  border-radius: 12px;
-  background-color: #F8F5EE;
-  border: 1px solid #EFE8DD;
+  width: 42px;
+  height: 42px;
   display: flex;
   align-items: center;
   justify-content: center;
   color: #8C6239;
   flex-shrink: 0;
+  background: transparent;
+  border: none;
 }
 
 .edu-card-info {
@@ -4210,9 +4210,9 @@ button {
   display: inline-block;
   font-size: 0.68rem;
   font-weight: 600;
-  color: #7A552F;
-  background-color: #FAF8F4;
-  border: 1px solid #EADBCC;
+  color: #6D4822;
+  background-color: #ECE5DA;
+  border: 1px solid #DBCFBE;
   padding: 2px 9px;
   border-radius: 100px;
   line-height: 1.35;
@@ -4280,7 +4280,7 @@ button {
   font-size: 0.66rem;
   font-weight: 600;
   letter-spacing: 0.16em;
-  color: var(--text-subtle);
+  color: #8C6239;
   line-height: 1.5;
   padding-top: 8px;
   flex-shrink: 0;
@@ -4302,14 +4302,14 @@ button {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  box-shadow: 0 2px 6px rgba(28, 27, 24, 0.02);
+  box-shadow: 0 2px 6px rgba(28, 27, 24, 0.03);
   transition: all var(--transition-normal);
 }
 
 .m-stat-card:hover {
   transform: translateY(-3px);
-  box-shadow: 0 8px 18px rgba(28, 27, 24, 0.05);
-  border-color: #DFD5C6;
+  box-shadow: 0 8px 18px rgba(140, 98, 57, 0.08);
+  border-color: #C8B59E;
 }
 
 .m-stat-icon {
@@ -4359,22 +4359,22 @@ button {
   display: flex;
   align-items: center;
   gap: 13px;
-  box-shadow: 0 2px 6px rgba(28, 27, 24, 0.02);
+  box-shadow: 0 2px 6px rgba(28, 27, 24, 0.03);
   transition: all var(--transition-normal);
 }
 
 .milestone-card-item:hover {
   transform: translateY(-2px);
-  border-color: #DFD5C6;
-  box-shadow: 0 6px 16px rgba(28, 27, 24, 0.05);
+  border-color: #C8B59E;
+  box-shadow: 0 6px 16px rgba(140, 98, 57, 0.08);
 }
 
 .m-badge-icon {
   width: 36px;
   height: 36px;
   border-radius: 50%;
-  background-color: #F8F5EE;
-  border: 1px solid #EADBCC;
+  background-color: #ECE5DA;
+  border: 1px solid #DBCFBE;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -4426,8 +4426,8 @@ button {
   width: 26px;
   height: 26px;
   border-radius: 50%;
-  background-color: #FAF8F4;
-  border: 1px solid #ECE5DA;
+  background-color: #ECE5DA;
+  border: 1px solid #DBCFBE;
   color: #8C6239;
   display: flex;
   align-items: center;
@@ -4484,7 +4484,7 @@ button {
   gap: 14px;
   text-decoration: none;
   color: inherit;
-  box-shadow: 0 2px 6px rgba(28, 27, 24, 0.02);
+  box-shadow: 0 2px 6px rgba(28, 27, 24, 0.03);
   transition: all var(--transition-normal);
 }
 
@@ -4498,8 +4498,8 @@ button {
   width: 40px;
   height: 40px;
   border-radius: 12px;
-  background-color: #F8F5EE;
-  border: 1px solid #EADBCC;
+  background-color: #ECE5DA;
+  border: 1px solid #DBCFBE;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -4533,8 +4533,8 @@ button {
   width: 28px;
   height: 28px;
   border-radius: 50%;
-  background-color: #FAF8F4;
-  border: 1px solid #ECE5DA;
+  background-color: #ECE5DA;
+  border: 1px solid #DBCFBE;
   color: #8C6239;
   display: flex;
   align-items: center;
