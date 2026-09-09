@@ -468,129 +468,340 @@
       </div>
     </section>
 
-    <!-- ==================== SECTION 04: PRIVATE TUTORING ==================== -->
-    <section class="tutoring-section">
+    <!-- ==================== SECTION 04: PRIVATE TUTORING (REVISED TO MOCKUP) ==================== -->
+    <section id="tutoring" class="tutoring-section">
       <div class="container">
         
-        <div class="section-header-flex">
-          <div>
+        <!-- Header Row -->
+        <div class="tutoring-header-row">
+          <div class="tutoring-header-title-col">
             <span class="section-number">/ 04</span>
             <h2 class="section-heading">Private Tutoring</h2>
-            <p class="section-subheading">Personalized guidance for every goal.</p>
+            <p class="section-subheading">Tailored learning for brighter futures.</p>
           </div>
-          <button class="btn btn-outline open-booking-modal" data-subject="Private Tutoring">
-            Book a Session &rarr;
-          </button>
+
+          <div class="tutoring-header-desc-col">
+            <p>Setiap siswa memiliki cara belajar yang berbeda. Saya menyediakan pendampingan pribadi yang disesuaikan dengan kebutuhan, tujuan, dan potensi mereka.</p>
+          </div>
+
+          <div class="tutoring-header-cta-col">
+            <button class="btn btn-primary open-booking-modal" data-subject="Private Tutoring">
+              Book a Session
+              <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </button>
+            <a href="https://wa.me/6285973729267?text=Halo%20Kak%20Hisyam%20Abilkhoir,%20saya%20tertarik%20dengan%20program%20Private%20Tutoring." target="_blank" rel="noopener noreferrer" class="tutoring-cta-sublink">
+              Chat via WhatsApp
+            </a>
+          </div>
         </div>
 
-        <div class="services-grid">
-          <!-- Service 1 -->
-          <div class="service-card">
-            <div class="service-thumb-wrap">
-              <img src="./assets/images/service-1.jpg" alt="Regular Private Session">
+        <!-- 3 Cards Grid -->
+        <div class="tutoring-cards-grid">
+          
+          <!-- Card 01: Regular Private -->
+          <div class="tutoring-card">
+            <div class="tutoring-thumb-wrap">
+              <span class="card-number-badge">01</span>
+              <img src="./assets/images/service-1.jpg" alt="Regular Private Tutoring">
             </div>
-            <div class="service-body">
-              <span class="service-tag-pill">1 — 1</span>
-              <h3 class="service-title">Regular Private</h3>
-              <p class="service-desc">Belajar lebih fokus dengan pendampingan penuh dan kurikulum yang disesuaikan.</p>
-              <div class="service-footer">
-                <button class="btn-circle-arrow open-booking-modal" data-subject="Regular Private (1-on-1)" aria-label="Pilih Regular Private">
+            <div class="tutoring-body">
+              <div class="tutoring-card-top">
+                <div>
+                  <h3 class="tutoring-card-title">Regular Private</h3>
+                  <p class="tutoring-card-desc">Pendampingan belajar rutin sesuai kurikulum dan kebutuhan siswa.</p>
+                </div>
+                <button class="btn-circle-arrow open-booking-modal" data-subject="Regular Private (SD-SMA)" aria-label="Book Regular Private">
                   &rarr;
                 </button>
+              </div>
+
+              <div class="tutoring-info-pricing">
+                <div class="tutoring-specs">
+                  <div class="spec-item">
+                    <svg class="spec-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                      <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
+                    <span>SD – SMA</span>
+                  </div>
+                  <div class="spec-item">
+                    <svg class="spec-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                      <line x1="8" y1="21" x2="16" y2="21"></line>
+                      <line x1="12" y1="17" x2="12" y2="21"></line>
+                    </svg>
+                    <span>Online / Offline</span>
+                  </div>
+                  <div class="spec-item">
+                    <svg class="spec-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <polyline points="12 6 12 12 16 14"></polyline>
+                    </svg>
+                    <span>60 – 90 menit / sesi</span>
+                  </div>
+                </div>
+
+                <div class="tutoring-pricing">
+                  <span class="price-label">Mulai dari</span>
+                  <div class="price-value">Rp 150.000</div>
+                  <span class="price-unit">/ sesi</span>
+                </div>
+              </div>
+
+              <div class="tutoring-tags">
+                <span class="tutoring-tag">Pemahaman Konsep</span>
+                <span class="tutoring-tag">Latihan Soal</span>
+                <span class="tutoring-tag">Evaluasi Berkala</span>
               </div>
             </div>
           </div>
 
-          <!-- Service 2 -->
-          <div class="service-card">
-            <div class="service-thumb-wrap">
+          <!-- Card 02: Exam Preparation -->
+          <div class="tutoring-card">
+            <div class="tutoring-thumb-wrap">
+              <span class="card-number-badge">02</span>
               <img src="./assets/images/service-2.jpg" alt="Exam Preparation">
             </div>
-            <div class="service-body">
-              <span class="service-tag-pill">Exam</span>
-              <h3 class="service-title">Exam Preparation</h3>
-              <p class="service-desc">Persiapan UTBK SNBT, ujian sekolah, kedinasan, dan tes akademik intensif.</p>
-              <div class="service-footer">
-                <button class="btn-circle-arrow open-booking-modal" data-subject="Exam Preparation" aria-label="Pilih Exam Preparation">
+            <div class="tutoring-body">
+              <div class="tutoring-card-top">
+                <div>
+                  <h3 class="tutoring-card-title">Exam Preparation</h3>
+                  <p class="tutoring-card-desc">Persiapan intensif untuk ujian sekolah, UTBK, dan seleksi masuk.</p>
+                </div>
+                <button class="btn-circle-arrow open-booking-modal" data-subject="Exam Preparation" aria-label="Book Exam Preparation">
                   &rarr;
                 </button>
+              </div>
+
+              <div class="tutoring-info-pricing">
+                <div class="tutoring-specs">
+                  <div class="spec-item">
+                    <svg class="spec-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                      <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
+                    <span>SMP – SMA</span>
+                  </div>
+                  <div class="spec-item">
+                    <svg class="spec-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                      <line x1="8" y1="21" x2="16" y2="21"></line>
+                      <line x1="12" y1="17" x2="12" y2="21"></line>
+                    </svg>
+                    <span>Online / Offline</span>
+                  </div>
+                  <div class="spec-item">
+                    <svg class="spec-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <polyline points="12 6 12 12 16 14"></polyline>
+                    </svg>
+                    <span>60 – 90 menit / sesi</span>
+                  </div>
+                </div>
+
+                <div class="tutoring-pricing">
+                  <span class="price-label">Mulai dari</span>
+                  <div class="price-value">Rp 175.000</div>
+                  <span class="price-unit">/ sesi</span>
+                </div>
+              </div>
+
+              <div class="tutoring-tags">
+                <span class="tutoring-tag">Try Out</span>
+                <span class="tutoring-tag">Pembahasan Soal</span>
+                <span class="tutoring-tag">Strategi Ujian</span>
               </div>
             </div>
           </div>
 
-          <!-- Service 3 -->
-          <div class="service-card">
-            <div class="service-thumb-wrap">
+          <!-- Card 03: Olympiad Coaching -->
+          <div class="tutoring-card">
+            <div class="tutoring-thumb-wrap">
+              <span class="card-number-badge">03</span>
               <img src="./assets/images/service-3.jpg" alt="Olympiad Coaching">
             </div>
-            <div class="service-body">
-              <span class="service-tag-pill">Competition</span>
-              <h3 class="service-title">Olympiad Coaching</h3>
-              <p class="service-desc">Pembinaan intensif untuk kompetisi dan olimpiade sains & matematika tingkat nasional.</p>
-              <div class="service-footer">
-                <button class="btn-circle-arrow open-booking-modal" data-subject="Olympiad Coaching" aria-label="Pilih Olympiad Coaching">
+            <div class="tutoring-body">
+              <div class="tutoring-card-top">
+                <div>
+                  <h3 class="tutoring-card-title">Olympiad Coaching</h3>
+                  <p class="tutoring-card-desc">Pembinaan khusus untuk kompetisi sains & matematika tingkat nasional.</p>
+                </div>
+                <button class="btn-circle-arrow open-booking-modal" data-subject="Olympiad Coaching" aria-label="Book Olympiad Coaching">
                   &rarr;
                 </button>
               </div>
+
+              <div class="tutoring-info-pricing">
+                <div class="tutoring-specs">
+                  <div class="spec-item">
+                    <svg class="spec-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                      <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
+                    <span>SMP – SMA</span>
+                  </div>
+                  <div class="spec-item">
+                    <svg class="spec-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                      <line x1="8" y1="21" x2="16" y2="21"></line>
+                      <line x1="12" y1="17" x2="12" y2="21"></line>
+                    </svg>
+                    <span>Online / Offline</span>
+                  </div>
+                  <div class="spec-item">
+                    <svg class="spec-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <polyline points="12 6 12 12 16 14"></polyline>
+                    </svg>
+                    <span>60 – 90 menit / sesi</span>
+                  </div>
+                </div>
+
+                <div class="tutoring-pricing">
+                  <span class="price-label">Mulai dari</span>
+                  <div class="price-value">Rp 200.000</div>
+                  <span class="price-unit">/ sesi</span>
+                </div>
+              </div>
+
+              <div class="tutoring-tags">
+                <span class="tutoring-tag">Materi Tingkat Lanjut</span>
+                <span class="tutoring-tag">Latihan Intensif</span>
+                <span class="tutoring-tag">Mentoring Kompetisi</span>
+              </div>
             </div>
           </div>
+
         </div>
 
         <!-- Features Ribbon -->
         <div class="features-ribbon">
           <div class="feature-pill">
             <div class="feature-pill-icon">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
                 <circle cx="12" cy="7" r="4"></circle>
               </svg>
             </div>
-            <span class="feature-pill-text">Personalized Learning Plan</span>
+            <div class="feature-pill-info">
+              <span class="feature-pill-text">Personalized Learning Plan</span>
+            </div>
           </div>
 
           <div class="feature-pill">
             <div class="feature-pill-icon">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
                 <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="16" y1="13" x2="8" y2="13"></line>
+                <line x1="16" y1="17" x2="8" y2="17"></line>
               </svg>
             </div>
-            <span class="feature-pill-text">Learning Materials</span>
+            <div class="feature-pill-info">
+              <span class="feature-pill-sub">Exclusive</span>
+              <span class="feature-pill-text">Learning Materials</span>
+            </div>
           </div>
 
           <div class="feature-pill">
             <div class="feature-pill-icon">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="18" y1="20" x2="18" y2="10"></line>
+                <line x1="12" y1="20" x2="12" y2="4"></line>
+                <line x1="6" y1="20" x2="6" y2="14"></line>
               </svg>
             </div>
-            <span class="feature-pill-text">Progress Updates</span>
+            <div class="feature-pill-info">
+              <span class="feature-pill-text">Progress Updates</span>
+            </div>
           </div>
 
           <div class="feature-pill">
             <div class="feature-pill-icon">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
                 <line x1="16" y1="2" x2="16" y2="6"></line>
                 <line x1="8" y1="2" x2="8" y2="6"></line>
                 <line x1="3" y1="10" x2="21" y2="10"></line>
               </svg>
             </div>
-            <span class="feature-pill-text">Flexible Schedule</span>
+            <div class="feature-pill-info">
+              <span class="feature-pill-text">Flexible Schedule</span>
+            </div>
           </div>
 
           <div class="feature-pill">
             <div class="feature-pill-icon">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
                 <line x1="8" y1="21" x2="16" y2="21"></line>
                 <line x1="12" y1="17" x2="12" y2="21"></line>
               </svg>
             </div>
-            <span class="feature-pill-text">Online / Offline Available</span>
+            <div class="feature-pill-info">
+              <span class="feature-pill-text">Online / Offline Available</span>
+            </div>
           </div>
 
-          <span class="features-ribbon-tagline">More than lessons, a brighter tomorrow</span>
+          <div class="features-ribbon-tagline-col">
+            <span class="tagline-line">SAME</span>
+            <span class="tagline-line">STUDENTS</span>
+            <span class="tagline-line">BRIGHTER</span>
+            <span class="tagline-line">FUTURES</span>
+          </div>
+        </div>
+
+        <!-- Bottom Banner Bar: Quote + Stats + Action -->
+        <div class="tutoring-banner-bar">
+          <!-- Left: Quote -->
+          <div class="banner-quote-col">
+            <blockquote class="banner-quote">
+              “Investing in the right guidance today, for a brighter tomorrow.”
+            </blockquote>
+            <div class="banner-quote-sub">
+              <span class="dash-line"></span>
+              <span>LET'S BUILD THEIR POTENTIAL TOGETHER</span>
+            </div>
+          </div>
+
+          <!-- Middle: Stats -->
+          <div class="banner-stats-col">
+            <div class="banner-stat-item">
+              <div class="banner-stat-num">150+</div>
+              <div class="banner-stat-lbl">Students Guided</div>
+            </div>
+            <div class="banner-stat-item">
+              <div class="banner-stat-num">95%</div>
+              <div class="banner-stat-lbl">Show Real Improvement</div>
+            </div>
+            <div class="banner-stat-item">
+              <div class="banner-stat-num">4.9<span>/5</span></div>
+              <div class="banner-stat-lbl">Parent Satisfaction</div>
+            </div>
+          </div>
+
+          <!-- Right: CTA Card + Floating Handwriting -->
+          <div class="banner-action-col">
+            <a href="https://wa.me/6285973729267?text=Halo%20Kak%20Hisyam%20Abilkhoir,%20saya%20tertarik%20untuk%20konsultasi%20sesi%20Private%20Tutoring." target="_blank" rel="noopener noreferrer" class="banner-cta-card">
+              <div class="banner-circle-btn">
+                &rarr;
+              </div>
+              <div class="banner-cta-text">
+                <strong>Book a Session</strong>
+                <span>or chat via WhatsApp</span>
+              </div>
+            </a>
+
+            <div class="banner-handwriting">
+              Good<br>
+              Students<br>
+              Brighter<br>
+              Futures
+            </div>
+          </div>
         </div>
 
       </div>
