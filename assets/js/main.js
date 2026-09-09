@@ -133,28 +133,51 @@ document.addEventListener('DOMContentLoaded', () => {
     accordionItems[0].classList.add('active');
   }
 
-  // --- 5. BOOKING MODAL & WHATSAPP INTEGRATION ---
-  const bookingModal = document.getElementById('bookingModal');
-  const openModalBtns = document.querySelectorAll('.open-booking-modal');
+  // --- 5. DIRECT TO CONTACT SECTION & MODAL UTILITIES ---
   const closeModalBtns = document.querySelectorAll('.modal-close-trigger');
-  const bookingForm = document.getElementById('bookingForm');
-  const WHATSAPP_NUMBER = '6285973729267'; // Hisyam Abilkhoir A.Md.Kom
+  const bookLinkTriggers = document.querySelectorAll('.book-link-trigger, .open-booking-modal');
 
-  const openModal = (defaultSubject = '') => {
-    if (bookingModal) {
-      if (defaultSubject && document.getElementById('bookingSubject')) {
-        document.getElementById('bookingSubject').value = defaultSubject;
+  // Direct and pre-select subject when clicking any Book / Konsultasi button
+  bookLinkTriggers.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      const href = btn.getAttribute('href');
+      if (href && href.startsWith('#contact')) {
+        // Let normal anchor jump or smooth scroll happen
+      } else {
+        e.preventDefault();
+        const contactSec = document.getElementById('contact');
+        if (contactSec) {
+          contactSec.scrollIntoView({ behavior: 'smooth' });
+        }
       }
-      bookingModal.classList.add('active');
-      document.body.style.overflow = 'hidden';
-    }
-  };
+
+      const rawSubject = btn.getAttribute('data-subject') || '';
+      const programSelect = document.getElementById('contactProgram');
+
+      if (programSelect && rawSubject) {
+        if (rawSubject.includes('Regular Private')) {
+          programSelect.value = 'Matematika (Dasar & Lanjut)';
+        } else if (rawSubject.includes('Exam Preparation')) {
+          programSelect.value = 'Persiapan Ujian & UTBK SNBT';
+        } else if (rawSubject.includes('Olympiad')) {
+          programSelect.value = 'Pembinaan Olimpiade Sains (OSN)';
+        } else if (rawSubject.includes('Prestasi') || rawSubject.includes('Cerita') || rawSubject.includes('Konsultasi')) {
+          programSelect.value = 'Konsultasi Kebutuhan Belajar';
+        } else {
+          programSelect.value = 'Matematika (Dasar & Lanjut)';
+        }
+      }
+
+      setTimeout(() => {
+        const nameInput = document.getElementById('contactName');
+        if (nameInput) {
+          nameInput.focus();
+        }
+      }, 500);
+    });
+  });
 
   const closeModal = () => {
-    if (bookingModal) {
-      bookingModal.classList.remove('active');
-      document.body.style.overflow = '';
-    }
     const articleModal = document.getElementById('articleModal');
     if (articleModal) {
       articleModal.classList.remove('active');
@@ -166,14 +189,6 @@ document.addEventListener('DOMContentLoaded', () => {
       document.body.style.overflow = '';
     }
   };
-
-  openModalBtns.forEach(btn => {
-    btn.addEventListener('click', (e) => {
-      e.preventDefault();
-      const subject = btn.getAttribute('data-subject') || '';
-      openModal(subject);
-    });
-  });
 
   closeModalBtns.forEach(btn => {
     btn.addEventListener('click', closeModal);
@@ -189,32 +204,6 @@ document.addEventListener('DOMContentLoaded', () => {
       if (e.target === overlay) closeModal();
     });
   });
-
-  // Handle WhatsApp Form submission
-  if (bookingForm) {
-    bookingForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const name = document.getElementById('studentName').value.trim();
-      const grade = document.getElementById('studentGrade').value;
-      const subject = document.getElementById('bookingSubject').value;
-      const sessionType = document.getElementById('sessionType').value;
-      const message = document.getElementById('studentNotes').value.trim();
-
-      const text = `Halo Kak Hisyam Abilkhoir,\n\nSaya ingin konsultasi / mendaftar sesi bimbingan belajar:\n` +
-        `• Nama: ${name}\n` +
-        `• Jenjang: ${grade}\n` +
-        `• Mata Pelajaran: ${subject}\n` +
-        `• Pilihan Sesi: ${sessionType}\n` +
-        (message ? `• Catatan: ${message}\n\n` : '\n') +
-        `Mohon info ketersediaan jadwal dan program belajarnya. Terima kasih!`;
-
-      const encodedText = encodeURIComponent(text);
-      const waUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodedText}`;
-
-      window.open(waUrl, '_blank');
-      closeModal();
-    });
-  }
 
   // Direct WhatsApp Button link generator
   document.querySelectorAll('.direct-wa-btn').forEach(btn => {
