@@ -3307,50 +3307,6 @@ button {
   color: #15803D;
 }
 
-/* Side Books Visual (Composite Mockup Element) */
-.mockup-side-books-visual {
-  display: none; /* Shown on wider screens */
-}
-
-@media (min-width: 1200px) {
-  .mockup-side-books-visual {
-    display: block;
-    position: absolute;
-    right: -40px;
-    bottom: -15px;
-    z-index: 1;
-    pointer-events: none;
-    opacity: 0.75;
-  }
-
-  .mockup-stacked-books {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-  }
-
-  .mockup-book-spine {
-    background-color: #FAF8F4;
-    border: 1px solid #E2D9CB;
-    border-radius: 6px;
-    padding: 6px 14px;
-    font-size: 0.72rem;
-    font-weight: 600;
-    color: #847C71;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
-    letter-spacing: 0.03em;
-  }
-
-  .mockup-side-handwriting {
-    font-family: var(--font-hand);
-    font-size: 1.25rem;
-    color: #9C6F43;
-    line-height: 1.15;
-    margin-top: 14px;
-    transform: rotate(5deg);
-  }
-}
-
 /* --- FOOTER --- */
 .footer {
   padding: 70px 0 35px;
