@@ -225,6 +225,37 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // Handle Bottom Contact Section Form Submission to WhatsApp
+  const bottomContactForm = document.getElementById('bottomContactForm');
+  if (bottomContactForm) {
+    bottomContactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const name = document.getElementById('contactName') ? document.getElementById('contactName').value.trim() : '';
+      const phone = document.getElementById('contactPhone') ? document.getElementById('contactPhone').value.trim() : '';
+      const grade = document.getElementById('contactGrade') ? document.getElementById('contactGrade').value : '';
+      const program = document.getElementById('contactProgram') ? document.getElementById('contactProgram').value : '';
+      const selectedModeRadio = document.querySelector('input[name="contactMode"]:checked');
+      const mode = selectedModeRadio ? selectedModeRadio.value : 'Offline (Tatap Muka di Bandung)';
+      const message = document.getElementById('contactMessage') ? document.getElementById('contactMessage').value.trim() : '';
+
+      const text = `Halo Kak Hisyam Abilkhoir,\n\n` +
+        `Saya ingin berkonsultasi mengenai bimbingan belajar privat melalui formulir kontak website:\n\n` +
+        `• Nama: ${name}\n` +
+        `• No. WhatsApp: ${phone}\n` +
+        `• Jenjang: ${grade}\n` +
+        `• Fokus Program: ${program}\n` +
+        `• Mode Belajar: ${mode}\n` +
+        (message ? `• Pesan / Kebutuhan: ${message}\n\n` : '\n') +
+        `Mohon info ketersediaan jadwal bimbingan dan detail programnya. Terima kasih!`;
+
+      const encodedText = encodeURIComponent(text);
+      const waUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodedText}`;
+
+      // Open WhatsApp in new tab
+      window.open(waUrl, '_blank');
+    });
+  }
+
   // --- 6. ARTICLE DETAILS MODAL ---
   const articleModal = document.getElementById('articleModal');
   const articleCards = document.querySelectorAll('.article-card');
