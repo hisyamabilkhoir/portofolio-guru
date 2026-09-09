@@ -233,7 +233,8 @@ document.addEventListener('DOMContentLoaded', () => {
     '1': {
       title: '5 Cara Membuat Anak Tidak Takut Matematika',
       tag: 'Tips & Trik',
-      date: '12 Aug 2025',
+      author: 'Hisyam Abilkhoir A.Md.Kom',
+      date: 'Selasa, 12 Agustus 2025',
       image: './assets/images/article-1.jpg',
       content: `
         <p>Banyak siswa memandang matematika sebagai momok menakutkan karena pendekatan belajar yang terlalu menekankan hafalan rumus, bukan pemahaman logika dasar.</p>
@@ -247,7 +248,8 @@ document.addEventListener('DOMContentLoaded', () => {
     '2': {
       title: 'Persiapan Menghadapi Olimpiade Matematika',
       tag: 'Olimpiade',
-      date: '3 Aug 2025',
+      author: 'Hisyam Abilkhoir A.Md.Kom',
+      date: 'Minggu, 3 Agustus 2025',
       image: './assets/images/article-2.jpg',
       content: `
         <p>Olimpiade Matematika (OSN / KSN) menuntut pemikiran kreatif non-konvensional yang jauh melampaui kurikulum sekolah standar.</p>
@@ -259,7 +261,8 @@ document.addEventListener('DOMContentLoaded', () => {
     '3': {
       title: 'Peran Orang Tua dalam Mendukung Proses Belajar Anak',
       tag: 'Parenting',
-      date: '28 Jul 2025',
+      author: 'Hisyam Abilkhoir A.Md.Kom',
+      date: 'Senin, 28 Juli 2025',
       image: './assets/images/article-3.jpg',
       content: `
         <p>Dukungan emosional dari orang tua adalah katalis terbaik untuk kesuksesan akademis jangka panjang anak.</p>
@@ -270,19 +273,42 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
 
+  const openArticleModalById = (id) => {
+    const data = articleContents[id];
+    if (data && articleModal) {
+      const tagEl = document.getElementById('modalArticleTag');
+      const titleEl = document.getElementById('modalArticleTitle');
+      const authorEl = document.getElementById('modalArticleAuthor');
+      const dateEl = document.getElementById('modalArticleDate');
+      const imgEl = document.getElementById('modalArticleImg');
+      const bodyEl = document.getElementById('modalArticleBody');
+
+      if (tagEl) tagEl.textContent = data.tag;
+      if (titleEl) titleEl.textContent = data.title;
+      if (authorEl) authorEl.textContent = data.author;
+      if (dateEl) dateEl.textContent = data.date;
+      if (imgEl) imgEl.src = data.image;
+      if (bodyEl) bodyEl.innerHTML = data.content;
+
+      articleModal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+  };
+
   articleCards.forEach(card => {
-    card.addEventListener('click', () => {
+    card.addEventListener('click', (e) => {
+      // Don't duplicate if clicking button
+      if (e.target.closest('.btn-article-detail')) return;
       const id = card.getAttribute('data-id');
-      const data = articleContents[id];
-      if (data && articleModal) {
-        document.getElementById('modalArticleTag').textContent = data.tag;
-        document.getElementById('modalArticleTitle').textContent = data.title;
-        document.getElementById('modalArticleDate').textContent = data.date;
-        document.getElementById('modalArticleImg').src = data.image;
-        document.getElementById('modalArticleBody').innerHTML = data.content;
-        articleModal.classList.add('active');
-        document.body.style.overflow = 'hidden';
-      }
+      openArticleModalById(id);
+    });
+  });
+
+  document.querySelectorAll('.btn-article-detail').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const id = btn.getAttribute('data-id');
+      openArticleModalById(id);
     });
   });
 

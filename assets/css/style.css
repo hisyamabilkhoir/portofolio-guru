@@ -2313,11 +2313,105 @@ button {
   flex-grow: 1;
 }
 
-.article-date {
-  font-size: 0.78rem;
-  color: var(--text-subtle);
+.article-meta-info {
   border-top: 1px solid var(--border-light);
+  padding-top: 14px;
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.article-author {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.article-author-avatar {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1.5px solid var(--color-bronze-light);
+  flex-shrink: 0;
+}
+
+.article-author-name {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.article-date-row {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.76rem;
+  color: var(--text-muted);
+}
+
+.article-date-row svg {
+  color: var(--color-bronze);
+  flex-shrink: 0;
+}
+
+.article-date {
+  font-size: 0.76rem;
+  color: var(--text-muted);
+}
+
+.article-footer {
+  margin-top: 14px;
   padding-top: 12px;
+  border-top: 1px dashed var(--border-light);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.btn-article-detail {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 18px;
+  border-radius: var(--radius-pill);
+  background-color: var(--bg-main);
+  color: var(--color-bronze-dark);
+  border: 1px solid var(--border-medium);
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-article-detail:hover {
+  background-color: var(--color-bronze);
+  color: #FFFFFF;
+  border-color: var(--color-bronze);
+  transform: translateX(3px);
+  box-shadow: 0 4px 12px rgba(160, 114, 72, 0.25);
+}
+
+.btn-article-detail svg {
+  transition: transform 0.25s ease;
+}
+
+.btn-article-detail:hover svg {
+  transform: translateX(3px);
+}
+
+.modal-article-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 10px 0 14px;
+  margin-bottom: 16px;
+  border-bottom: 1px solid var(--border-light);
 }
 
 /* --- FAQ & CTA SECTION --- */
