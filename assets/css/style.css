@@ -4030,8 +4030,8 @@ button {
 
 /* ==================== SECTION 03: EDUCATION & PERSONAL ACHIEVEMENTS ==================== */
 .education-section {
-  padding: 100px 0 110px;
-  background: linear-gradient(90deg, #FFFFFF 50%, #ECE5DA 50%); /* Kiri Putih, Kanan Coklat */
+  padding: 0;
+  background-color: #ECE5DA; /* Warm beige base */
   border-top: 1px solid var(--border-light);
   border-bottom: 1px solid var(--border-light);
   position: relative;
@@ -4039,40 +4039,66 @@ button {
   scroll-margin-top: 85px;
 }
 
-/* 2-Column Main Layout */
-.edu-achieve-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0;
-  align-items: start;
+/* Two-Tone Open Book Spread Wrapper: Left 50% White, Right 50% Brown */
+.edu-split-container {
+  display: flex;
+  width: 100%;
   position: relative;
 }
 
 /* Center book crease divider between left & right pages */
-.edu-achieve-grid::before {
+.edu-split-container::before {
   content: '';
   position: absolute;
-  top: -20px;
-  bottom: -20px;
+  top: 0;
+  bottom: 0;
   left: 50%;
   width: 1px;
-  background: linear-gradient(180deg, transparent 0%, rgba(140, 98, 57, 0.22) 12%, rgba(140, 98, 57, 0.22) 88%, transparent 100%);
-  box-shadow: -2px 0 8px rgba(0, 0, 0, 0.04);
-  z-index: 4;
+  background: linear-gradient(180deg, transparent 0%, rgba(140, 98, 57, 0.28) 8%, rgba(140, 98, 57, 0.28) 92%, transparent 100%);
+  box-shadow: -2px 0 8px rgba(0, 0, 0, 0.05);
+  z-index: 10;
 }
 
-/* --- Left Column: Education Background (White Page) --- */
+/* --- Left Half: Education Background (100% White Page) --- */
+.edu-half-left {
+  flex: 0 0 50%;
+  width: 50%;
+  background-color: #FFFFFF; /* SELURUH SISI KIRI PUTIH BERSIH */
+  display: flex;
+  justify-content: flex-end;
+  padding: 95px 0 105px;
+  box-sizing: border-box;
+}
+
 .edu-col-left {
   display: flex;
   flex-direction: column;
+  width: 100%;
+  max-width: 620px;
+  padding-left: 24px;
   padding-right: 48px;
+  box-sizing: border-box;
 }
 
-/* --- Right Column: Recognitions & Milestones (Brown Page) --- */
+/* --- Right Half: Recognitions & Milestones (100% Brown Page) --- */
+.edu-half-right {
+  flex: 0 0 50%;
+  width: 50%;
+  background-color: #ECE5DA; /* SELURUH SISI KANAN COKLAT HANGAT */
+  display: flex;
+  justify-content: flex-start;
+  padding: 95px 0 105px;
+  box-sizing: border-box;
+}
+
 .edu-col-right {
   display: flex;
   flex-direction: column;
+  width: 100%;
+  max-width: 620px;
   padding-left: 48px;
+  padding-right: 24px;
+  box-sizing: border-box;
 }
 
 .edu-header {
@@ -4280,12 +4306,6 @@ button {
   font-style: italic;
 }
 
-/* --- Right Column: Recognitions & Milestones --- */
-.edu-col-right {
-  display: flex;
-  flex-direction: column;
-}
-
 .milestones-header-row {
   display: flex;
   justify-content: space-between;
@@ -4312,18 +4332,19 @@ button {
 .milestones-stats-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 14px;
+  gap: 12px;
   margin-bottom: 26px;
 }
 
 .m-stat-card {
   background-color: #FFFFFF;
   border: 1px solid #ECE5DA;
-  border-radius: 18px;
-  padding: 18px 14px 16px;
+  border-radius: 16px;
+  padding: 16px 12px 14px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  min-width: 0;
   box-shadow: 0 2px 6px rgba(28, 27, 24, 0.03);
   transition: all var(--transition-normal);
 }
@@ -4593,32 +4614,39 @@ button {
 
 /* Responsive Rules for Education & Milestones */
 @media (max-width: 992px) {
-  .education-section {
-    background: #ECE5DA; /* Bottom stays brown */
-    padding: 0;
+  .edu-split-container {
+    flex-direction: column;
   }
 
-  .edu-achieve-grid {
-    grid-template-columns: 1fr;
-    gap: 0;
-  }
-
-  .edu-achieve-grid::before {
+  .edu-split-container::before {
     display: none;
   }
 
-  .edu-col-left {
-    background-color: #FFFFFF; /* Top (Education) stays White */
-    padding: 70px var(--container-padding) 60px;
-    margin: 0 calc(-1 * var(--container-padding));
+  .edu-half-left {
+    flex: 0 0 100%;
+    width: 100%;
+    background-color: #FFFFFF;
+    padding: 70px 0 60px;
+    justify-content: center;
     border-bottom: 1px solid #DFD7CA;
   }
 
-  .edu-col-right {
-    background-color: #ECE5DA; /* Bottom (Milestones) stays Brown */
+  .edu-col-left {
+    max-width: var(--container-max);
+    padding: 0 var(--container-padding);
+  }
+
+  .edu-half-right {
+    flex: 0 0 100%;
+    width: 100%;
+    background-color: #ECE5DA;
     padding: 60px 0 75px;
-    padding-left: 0;
-    padding-right: 0;
+    justify-content: center;
+  }
+
+  .edu-col-right {
+    max-width: var(--container-max);
+    padding: 0 var(--container-padding);
   }
 
   .milestones-content-split {
@@ -4628,11 +4656,11 @@ button {
 }
 
 @media (max-width: 768px) {
-  .edu-col-left {
-    padding: 55px var(--container-padding) 50px;
+  .edu-half-left {
+    padding: 55px 0 45px;
   }
 
-  .edu-col-right {
+  .edu-half-right {
     padding: 45px 0 60px;
   }
 
