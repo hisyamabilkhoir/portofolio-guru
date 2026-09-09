@@ -288,92 +288,162 @@
     <!-- ==================== SECTION 02: SUBJECTS I TEACH ==================== -->
     <section id="teaching" class="subjects-section">
       <div class="container">
-        <div class="subjects-layout">
-          
-          <!-- Left: Cards -->
-          <div>
+        
+        <!-- Header Row -->
+        <div class="subjects-header-row">
+          <div class="subjects-header-left">
             <span class="section-number">/ 02</span>
-            <h2 class="section-heading">Subjects I Teach</h2>
+            <h2 class="section-heading">Subjects I <em class="serif-accent">Teach</em></h2>
             <p class="section-subheading">Focused subjects, bigger possibilities.</p>
-
-            <div class="subjects-grid">
-              <!-- Subject 1 -->
-              <div class="subject-card">
-                <div class="subject-icon-box">
-                  <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <rect x="4" y="2" width="16" height="20" rx="2"></rect>
-                    <line x1="8" y1="6" x2="16" y2="6"></line>
-                    <line x1="16" y1="14" x2="16" y2="18"></line>
-                    <path d="M16 10h.01"></path>
-                    <path d="M12 10h.01"></path>
-                    <path d="M8 10h.01"></path>
-                    <path d="M12 14h.01"></path>
-                    <path d="M8 14h.01"></path>
-                    <path d="M12 18h.01"></path>
-                    <path d="M8 18h.01"></path>
-                  </svg>
-                </div>
-                <h3 class="subject-title">Mathematics</h3>
-                <p class="subject-level">SD • SMP • SMA</p>
-              </div>
-
-              <!-- Subject 2 -->
-              <div class="subject-card">
-                <div class="subject-icon-box">
-                  <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <circle cx="12" cy="12" r="1"></circle>
-                    <path d="M20.2 20.2c2.4-2.4 2.4-6.3 0-8.7L12 3.3 3.8 11.5c-2.4 2.4-2.4 6.3 0 8.7 2.4 2.4 6.3 2.4 8.7 0l7.7-7.7"></path>
-                    <path d="M5 5a10 10 0 0 1 14 0"></path>
-                  </svg>
-                </div>
-                <h3 class="subject-title">Physics</h3>
-                <p class="subject-level">SMP • SMA</p>
-              </div>
-
-              <!-- Subject 3 -->
-              <div class="subject-card">
-                <div class="subject-icon-box">
-                  <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path>
-                    <rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect>
-                    <path d="m9 14 2 2 4-4"></path>
-                  </svg>
-                </div>
-                <h3 class="subject-title">Exam Prep</h3>
-                <p class="subject-level">UTBK • Ujian Sekolah • Olimpiade</p>
-              </div>
-
-              <!-- Subject 4 -->
-              <div class="subject-card">
-                <div class="subject-icon-box">
-                  <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                    <circle cx="9" cy="7" r="4"></circle>
-                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-                  </svg>
-                </div>
-                <h3 class="subject-title">Academic Mentoring</h3>
-                <p class="subject-level">Belajar Lebih Terarah</p>
-              </div>
+          </div>
+          <div class="subjects-header-right">
+            <div class="subjects-header-quote">
+              <span class="quote-dash"></span>
+              <p>
+                Different students.<br>
+                Different goals.<br>
+                A more personalized<br>
+                learning experience.
+              </p>
             </div>
           </div>
+        </div>
 
-          <!-- Right: Visual with Handwritten Note -->
-          <div class="subjects-visual">
-            <img src="./assets/images/subject-books.jpg" alt="Buku referensi pembelajaran">
-            <div class="subject-note-overlay">
-              <div class="note-handwritten">
-                Different<br>
-                Students<br>
-                Different<br>
-                Approaches
+        <!-- Main Body Grid: 4 Cards on Left + Stacked Depth Visual on Right -->
+        <div class="subjects-main-layout">
+          
+          <!-- Left 2x2 Cards Grid -->
+          <div class="subjects-cards-grid">
+            
+            <!-- Card 01: Mathematics -->
+            <div class="subject-card-v2">
+              <span class="subject-card-badge">01</span>
+              <div class="subject-card-inner">
+                <div class="subject-card-media">
+                  <img src="./assets/images/subject-math.png" alt="Mathematics" class="subject-card-icon-img" loading="lazy">
+                </div>
+                <div class="subject-card-content">
+                  <div class="subject-card-head">
+                    <div>
+                      <h3 class="subject-card-title">Mathematics</h3>
+                      <p class="subject-card-level">SD &bull; SMP &bull; SMA</p>
+                    </div>
+                    <a href="#tutoring" class="subject-circle-btn" aria-label="Learn more about Mathematics">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                      </svg>
+                    </a>
+                  </div>
+                  <div class="subject-card-divider"></div>
+                  <p class="subject-card-desc">From basic concepts to advanced problem solving.</p>
+                </div>
               </div>
-              <span class="note-sub">Same brighter future</span>
+            </div>
+
+            <!-- Card 02: Physics -->
+            <div class="subject-card-v2">
+              <span class="subject-card-badge">02</span>
+              <div class="subject-card-inner">
+                <div class="subject-card-media">
+                  <img src="./assets/images/subject-physics.png" alt="Physics" class="subject-card-icon-img" loading="lazy">
+                </div>
+                <div class="subject-card-content">
+                  <div class="subject-card-head">
+                    <div>
+                      <h3 class="subject-card-title">Physics</h3>
+                      <p class="subject-card-level">SMP &bull; SMA</p>
+                    </div>
+                    <a href="#tutoring" class="subject-circle-btn" aria-label="Learn more about Physics">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                      </svg>
+                    </a>
+                  </div>
+                  <div class="subject-card-divider"></div>
+                  <p class="subject-card-desc">Understand the principles. See the world differently.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 03: Exam Preparation -->
+            <div class="subject-card-v2">
+              <span class="subject-card-badge">03</span>
+              <div class="subject-card-inner">
+                <div class="subject-card-media">
+                  <img src="./assets/images/subject-exam.png" alt="Exam Preparation" class="subject-card-icon-img" loading="lazy">
+                </div>
+                <div class="subject-card-content">
+                  <div class="subject-card-head">
+                    <div>
+                      <h3 class="subject-card-title">Exam Preparation</h3>
+                      <p class="subject-card-level">UTBK &bull; Ujian Sekolah &bull; Olimpiade</p>
+                    </div>
+                    <a href="#tutoring" class="subject-circle-btn" aria-label="Learn more about Exam Preparation">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                      </svg>
+                    </a>
+                  </div>
+                  <div class="subject-card-divider"></div>
+                  <p class="subject-card-desc">Structured and focused preparation for your success.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 04: Academic Mentoring -->
+            <div class="subject-card-v2">
+              <span class="subject-card-badge">04</span>
+              <div class="subject-card-inner">
+                <div class="subject-card-media">
+                  <img src="./assets/images/subject-mentoring.png" alt="Academic Mentoring" class="subject-card-icon-img" loading="lazy">
+                </div>
+                <div class="subject-card-content">
+                  <div class="subject-card-head">
+                    <div>
+                      <h3 class="subject-card-title">Academic Mentoring</h3>
+                      <p class="subject-card-level">Belajar Lebih Terarah</p>
+                    </div>
+                    <a href="#tutoring" class="subject-circle-btn" aria-label="Learn more about Academic Mentoring">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                      </svg>
+                    </a>
+                  </div>
+                  <div class="subject-card-divider"></div>
+                  <p class="subject-card-desc">Personal guidance to build better learning habits.</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Right Column: Stacked Depth Visual Card -->
+          <div class="subjects-visual-column">
+            <div class="subjects-visual-frame">
+              <img src="./assets/images/subject-visual-stack.png" alt="Study desk reference books and notes" class="subjects-stack-img" loading="lazy">
             </div>
           </div>
 
         </div>
+
+        <!-- Bottom Tagline & Section Indicator -->
+        <div class="subjects-bottom-bar">
+          <div class="subjects-tagline-wrap">
+            <span class="subjects-tagline-line"></span>
+            <span class="subjects-tagline-text">KNOWLEDGE TODAY, BRIGHTER TOMORROWS</span>
+          </div>
+          <div class="subjects-pagination-indicator">
+            <span class="sub-dot active"></span>
+            <span class="sub-dot"></span>
+            <span class="sub-dot"></span>
+            <span class="sub-dot-num">02</span>
+          </div>
+        </div>
+
       </div>
     </section>
 
