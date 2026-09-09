@@ -1029,51 +1029,140 @@
       <div class="container">
         <div class="testimonials-layout">
           
-          <!-- Left Content -->
-          <div>
+          <!-- Left Content with Action Row & Navigation Arrows -->
+          <div class="testimonials-header-col">
             <span class="section-tag">Student Stories</span>
             <h2 class="section-heading">
               Real Progress.<br>
               Real Impact.
             </h2>
-            <p class="section-subheading" style="margin-bottom: 28px;">
+            <p class="section-subheading">
               From struggling to confident — here are some of their stories.
             </p>
-            <button class="btn btn-outline open-booking-modal" data-subject="Info Kelas">
-              More Stories &rarr;
-            </button>
-          </div>
 
-          <!-- Right Testimonial Cards -->
-          <div class="testimonials-cards-wrapper">
-            <!-- Card 1 -->
-            <div class="testimonial-card">
-              <div class="testimonial-quote-icon">“</div>
-              <p class="testimonial-text">
-                “Awalnya saya kesulitan memahami matematika. Setelah belajar dengan Kak Hisyam, saya jadi lebih percaya diri dan berhasil masuk jurusan impian saya di PTN.”
-              </p>
-              <div class="testimonial-author">
-                <img class="author-avatar" src="./assets/images/testimonial-aulia.jpg" alt="Aulia">
-                <div>
-                  <h4 class="author-name">Aulia</h4>
-                  <p class="author-role">Student — Grade 12</p>
-                </div>
+            <div class="testimonials-action-row">
+              <button class="btn-pill-outline open-booking-modal" data-subject="Cerita & Pengalaman Siswa">
+                More Stories &rarr;
+              </button>
+              <div class="slider-nav-btns">
+                <button class="nav-arrow-btn" id="testiPrev" aria-label="Lihat cerita sebelumnya">&larr;</button>
+                <button class="nav-arrow-btn" id="testiNext" aria-label="Lihat cerita berikutnya">&rarr;</button>
               </div>
             </div>
+          </div>
 
-            <!-- Card 2 -->
-            <div class="testimonial-card">
-              <div class="testimonial-quote-icon">“</div>
-              <p class="testimonial-text">
-                “Metode mengajarnya sangat jelas dan sabar. Anak saya jadi lebih semangat belajar dan nilainya meningkat pesat sejak bulan pertama bimbingan.”
-              </p>
-              <div class="testimonial-author">
-                <img class="author-avatar" src="./assets/images/testimonial-rina.jpg" alt="Ibu Rina">
-                <div>
-                  <h4 class="author-name">Ibu Rina</h4>
-                  <p class="author-role">Parent of Grade 9 Student</p>
+          <!-- Right: Testimonials Slider Viewport & Track -->
+          <div class="testimonials-slider-container">
+            <div class="testimonials-slider-track" id="testimonialsTrack">
+              
+              <!-- Review 1: Aulia -->
+              <div class="testimonial-card">
+                <div class="testimonial-top-row">
+                  <div class="testimonial-quote-icon">“</div>
+                  <div class="testimonial-stars" aria-label="5 bintang">★★★★★</div>
+                </div>
+                <p class="testimonial-text">
+                  “Awalnya saya kesulitan memahami matematika dan selalu gugup saat ujian. Setelah belajar dengan Kak Hisyam, cara berpikir saya berubah total. Logikanya diajarkan dari akar, bukan sekadar hafalan rumus. Hasilnya saya berhasil lolos jurusan impian di PTN!”
+                </p>
+                <div class="testimonial-author">
+                  <img class="author-avatar" src="./assets/images/testimonial-aulia.jpg" alt="Aulia" loading="lazy">
+                  <div>
+                    <h4 class="author-name">Aulia</h4>
+                    <p class="author-role">Student — Grade 12 (Alumni SNBT)</p>
+                  </div>
                 </div>
               </div>
+
+              <!-- Review 2: Ibu Rina -->
+              <div class="testimonial-card">
+                <div class="testimonial-top-row">
+                  <div class="testimonial-quote-icon">“</div>
+                  <div class="testimonial-stars" aria-label="5 bintang">★★★★★</div>
+                </div>
+                <p class="testimonial-text">
+                  “Metode mengajarnya sangat sabar dan runtut. Anak saya yang tadinya malas belajar sains jadi antusias dan selalu bertanya. Nilai rapor semester ini naik drastis. Komunikasi Kak Hisyam dengan orang tua juga sangat transparan.”
+                </p>
+                <div class="testimonial-author">
+                  <img class="author-avatar" src="./assets/images/testimonial-rina.jpg" alt="Ibu Rina" loading="lazy">
+                  <div>
+                    <h4 class="author-name">Ibu Rina</h4>
+                    <p class="author-role">Parent of Grade 9 Student</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Review 3: Bapak Hendra -->
+              <div class="testimonial-card">
+                <div class="testimonial-top-row">
+                  <div class="testimonial-quote-icon">“</div>
+                  <div class="testimonial-stars" aria-label="5 bintang">★★★★★</div>
+                </div>
+                <p class="testimonial-text">
+                  “Sebagai orang tua yang bekerja, saya merasa sangat terbantu dengan laporan berkala Kak Hisyam. Pendampingannya tidak hanya akademis, tetapi juga membangun disiplin dan jadwal belajar mandiri yang sehat di rumah.”
+                </p>
+                <div class="testimonial-author">
+                  <img class="author-avatar" src="./assets/images/testi-hendra.jpg" alt="Bapak Hendra" loading="lazy">
+                  <div>
+                    <h4 class="author-name">Bapak Hendra</h4>
+                    <p class="author-role">Parent of Grade 11 Student</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Review 4: Siti Rahma -->
+              <div class="testimonial-card">
+                <div class="testimonial-top-row">
+                  <div class="testimonial-quote-icon">“</div>
+                  <div class="testimonial-stars" aria-label="5 bintang">★★★★★</div>
+                </div>
+                <p class="testimonial-text">
+                  “Materi Penalaran Matematika dan TPS UTBK yang awalnya terasa rumit jadi sangat terstruktur lewat trik eliminasi dan konsep fundamental Kak Hisyam. Skor saya tembus 740+!”
+                </p>
+                <div class="testimonial-author">
+                  <img class="author-avatar" src="./assets/images/testi-siti.jpg" alt="Siti Rahma" loading="lazy">
+                  <div>
+                    <h4 class="author-name">Siti Rahma</h4>
+                    <p class="author-role">Student — UTBK SNBT Fighter</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Review 5: Dr. Anwar -->
+              <div class="testimonial-card">
+                <div class="testimonial-top-row">
+                  <div class="testimonial-quote-icon">“</div>
+                  <div class="testimonial-stars" aria-label="5 bintang">★★★★★</div>
+                </div>
+                <p class="testimonial-text">
+                  “Persiapan masuk Fakultas Kedokteran membutuhkan ketelitian ekstra tinggi pada Fisika dan Kimia. Kak Hisyam mampu memberikan simulasi soal level tinggi dengan penjelasan yang tajam dan efisien.”
+                </p>
+                <div class="testimonial-author">
+                  <img class="author-avatar" src="./assets/images/testi-anwar.jpg" alt="Dr. Anwar" loading="lazy">
+                  <div>
+                    <h4 class="author-name">Dr. Anwar</h4>
+                    <p class="author-role">Parent of Medical Student</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Review 6: Kevin Pratama -->
+              <div class="testimonial-card">
+                <div class="testimonial-top-row">
+                  <div class="testimonial-quote-icon">“</div>
+                  <div class="testimonial-stars" aria-label="5 bintang">★★★★★</div>
+                </div>
+                <p class="testimonial-text">
+                  “Bimbingan persiapan OSN bersama Kak Hisyam membuka wawasan saya tentang bagaimana problem solving matematika tingkat tinggi sesungguhnya bekerja. Sangat recommended untuk pembinaan intensif!”
+                </p>
+                <div class="testimonial-author">
+                  <img class="author-avatar" src="./assets/images/testi-kevin.jpg" alt="Kevin Pratama" loading="lazy">
+                  <div>
+                    <h4 class="author-name">Kevin Pratama</h4>
+                    <p class="author-role">Student — Gold Medalist OSN</p>
+                  </div>
+                </div>
+              </div>
+
             </div>
           </div>
 

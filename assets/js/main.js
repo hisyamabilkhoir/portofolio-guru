@@ -342,4 +342,64 @@ document.addEventListener('DOMContentLoaded', () => {
       achieveTrack.scrollLeft = scrollLeft - walk;
     });
   }
+
+  // --- 8. TESTIMONIALS CAROUSEL SLIDER ---
+  const testiTrack = document.getElementById('testimonialsTrack');
+  const testiPrev = document.getElementById('testiPrev');
+  const testiNext = document.getElementById('testiNext');
+
+  if (testiTrack && testiPrev && testiNext) {
+    const getTestiStep = () => {
+      const card = testiTrack.querySelector('.testimonial-card');
+      if (card) {
+        return card.offsetWidth + 20;
+      }
+      return 310;
+    };
+
+    testiNext.addEventListener('click', () => {
+      const step = getTestiStep();
+      const maxScroll = testiTrack.scrollWidth - testiTrack.clientWidth;
+      if (testiTrack.scrollLeft >= maxScroll - 10) {
+        testiTrack.scrollTo({ left: 0, behavior: 'smooth' });
+      } else {
+        testiTrack.scrollBy({ left: step, behavior: 'smooth' });
+      }
+    });
+
+    testiPrev.addEventListener('click', () => {
+      const step = getTestiStep();
+      if (testiTrack.scrollLeft <= 10) {
+        const maxScroll = testiTrack.scrollWidth - testiTrack.clientWidth;
+        testiTrack.scrollTo({ left: maxScroll, behavior: 'smooth' });
+      } else {
+        testiTrack.scrollBy({ left: -step, behavior: 'smooth' });
+      }
+    });
+
+    // Mouse drag support for testimonials
+    let isTestiDown = false;
+    let startTestiX = 0;
+    let scrollTestiLeft = 0;
+
+    testiTrack.addEventListener('mousedown', (e) => {
+      isTestiDown = true;
+      testiTrack.style.cursor = 'grabbing';
+      startTestiX = e.pageX - testiTrack.offsetLeft;
+      scrollTestiLeft = testiTrack.scrollLeft;
+    });
+
+    window.addEventListener('mouseup', () => {
+      isTestiDown = false;
+      if (testiTrack) testiTrack.style.cursor = '';
+    });
+
+    testiTrack.addEventListener('mousemove', (e) => {
+      if (!isTestiDown) return;
+      e.preventDefault();
+      const x = e.pageX - testiTrack.offsetLeft;
+      const walk = (x - startTestiX) * 1.5;
+      testiTrack.scrollLeft = scrollTestiLeft - walk;
+    });
+  }
 });
