@@ -281,17 +281,65 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // --- 7. CAROUSEL PREV/NEXT ARROWS FOR ACHIEVEMENTS & STORIES ---
-  const achieveGrid = document.querySelector('.students-cards-grid');
+  // --- 7. CAROUSEL PREV/NEXT ARROWS FOR ACHIEVEMENTS SLIDER ---
+  const achieveTrack = document.getElementById('studentsTrack');
   const achievePrev = document.getElementById('achievePrev');
   const achieveNext = document.getElementById('achieveNext');
 
-  if (achieveGrid && achievePrev && achieveNext) {
-    achievePrev.addEventListener('click', () => {
-      achieveGrid.scrollBy({ left: -240, behavior: 'smooth' });
-    });
+  if (achieveTrack && achievePrev && achieveNext) {
+    const getScrollStep = () => {
+      const card = achieveTrack.querySelector('.student-card');
+      if (card) {
+        return card.offsetWidth + 16;
+      }
+      return 230;
+    };
+
     achieveNext.addEventListener('click', () => {
-      achieveGrid.scrollBy({ left: 240, behavior: 'smooth' });
+      const step = getScrollStep();
+      const maxScroll = achieveTrack.scrollWidth - achieveTrack.clientWidth;
+      if (achieveTrack.scrollLeft >= maxScroll - 10) {
+        // Loop back to start smoothly
+        achieveTrack.scrollTo({ left: 0, behavior: 'smooth' });
+      } else {
+        achieveTrack.scrollBy({ left: step, behavior: 'smooth' });
+      }
+    });
+
+    achievePrev.addEventListener('click', () => {
+      const step = getScrollStep();
+      if (achieveTrack.scrollLeft <= 10) {
+        // Loop to end smoothly
+        const maxScroll = achieveTrack.scrollWidth - achieveTrack.clientWidth;
+        achieveTrack.scrollTo({ left: maxScroll, behavior: 'smooth' });
+      } else {
+        achieveTrack.scrollBy({ left: -step, behavior: 'smooth' });
+      }
+    });
+
+    // Optional drag to scroll
+    let isDown = false;
+    let startX = 0;
+    let scrollLeft = 0;
+
+    achieveTrack.addEventListener('mousedown', (e) => {
+      isDown = true;
+      achieveTrack.style.cursor = 'grabbing';
+      startX = e.pageX - achieveTrack.offsetLeft;
+      scrollLeft = achieveTrack.scrollLeft;
+    });
+
+    window.addEventListener('mouseup', () => {
+      isDown = false;
+      if (achieveTrack) achieveTrack.style.cursor = '';
+    });
+
+    achieveTrack.addEventListener('mousemove', (e) => {
+      if (!isDown) return;
+      e.preventDefault();
+      const x = e.pageX - achieveTrack.offsetLeft;
+      const walk = (x - startX) * 1.5;
+      achieveTrack.scrollLeft = scrollLeft - walk;
     });
   }
 });

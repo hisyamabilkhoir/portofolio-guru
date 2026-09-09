@@ -881,74 +881,133 @@
     <section id="achievements" class="students-section">
       <div class="container">
         
-        <div class="section-header-flex">
-          <div>
-            <span class="section-number">/ 05</span>
-            <h2 class="section-heading">My Students</h2>
-            <p class="section-subheading">Their progress is the greatest reward.</p>
-          </div>
+        <!-- Header: Title, Subtitle, and Action Buttons grouped on the left matching mockup -->
+        <div class="students-header">
+          <span class="section-number">/ 05</span>
+          <h2 class="section-heading">My Students</h2>
+          <p class="section-subheading">Their progress is the greatest reward.</p>
 
-          <div class="header-nav-arrows">
-            <a href="#booking" class="btn btn-outline open-booking-modal" style="margin-right: 12px;">See All Achievements &rarr;</a>
-            <button class="nav-arrow-btn" id="achievePrev" aria-label="Geser ke kiri">&larr;</button>
-            <button class="nav-arrow-btn" id="achieveNext" aria-label="Geser ke kanan">&rarr;</button>
+          <div class="students-action-row">
+            <button class="btn-pill-outline open-booking-modal" data-subject="Prestasi & Konsultasi Belajar">
+              See All Achievements &rarr;
+            </button>
+            <div class="slider-nav-btns">
+              <button class="nav-arrow-btn" id="achievePrev" aria-label="Lihat siswa sebelumnya">&larr;</button>
+              <button class="nav-arrow-btn" id="achieveNext" aria-label="Lihat siswa berikutnya">&rarr;</button>
+            </div>
           </div>
         </div>
 
         <div class="students-layout">
           
-          <!-- 4 Student Cards Grid -->
-          <div class="students-cards-grid">
-            <!-- Student 1 -->
-            <div class="student-card">
-              <img class="student-thumb" src="./assets/images/student-rafi.jpg" alt="Siswa Rafi">
-              <div class="student-award">
-                <span class="award-icon">🥇</span>
-                <span class="award-title">Gold Medal<br>National Mathematics Competition</span>
+          <!-- 8 Students Slider Container -->
+          <div class="students-slider-container">
+            <div class="students-slider-track" id="studentsTrack">
+              
+              <!-- Student 1: Rafi -->
+              <div class="student-card">
+                <img class="student-thumb" src="./assets/images/student-rafi.jpg" alt="Siswa Rafi" loading="lazy">
+                <div class="student-award">
+                  <span class="award-icon">🥇</span>
+                  <span class="award-title">Gold Medal<br>National Mathematics Competition</span>
+                </div>
+                <div class="student-footer">
+                  <h4 class="student-name">Rafi</h4>
+                  <p class="student-quote">“Belajar jadi lebih menyenangkan!”</p>
+                </div>
               </div>
-              <div class="student-footer">
-                <h4 class="student-name">Rafi</h4>
-                <p class="student-quote">“Belajar jadi lebih menyenangkan!”</p>
-              </div>
-            </div>
 
-            <!-- Student 2 -->
-            <div class="student-card">
-              <img class="student-thumb" src="./assets/images/student-nadia.jpg" alt="Siswa Nadia">
-              <div class="student-award">
-                <span class="award-icon">🥈</span>
-                <span class="award-title">1st Place<br>Regional Science Competition</span>
+              <!-- Student 2: Nadia -->
+              <div class="student-card">
+                <img class="student-thumb" src="./assets/images/student-nadia.jpg" alt="Siswa Nadia" loading="lazy">
+                <div class="student-award">
+                  <span class="award-icon">🥈</span>
+                  <span class="award-title">1st Place<br>Regional Science Competition</span>
+                </div>
+                <div class="student-footer">
+                  <h4 class="student-name">Nadia</h4>
+                  <p class="student-quote">“Paham konsepnya dari dasar.”</p>
+                </div>
               </div>
-              <div class="student-footer">
-                <h4 class="student-name">Nadia</h4>
-                <p class="student-quote">“Paham konsepnya dari dasar.”</p>
-              </div>
-            </div>
 
-            <!-- Student 3 -->
-            <div class="student-card">
-              <img class="student-thumb" src="./assets/images/student-dimas.jpg" alt="Siswa Dimas">
-              <div class="student-award">
-                <span class="award-icon">🏆</span>
-                <span class="award-title">Top 3<br>School Ranking SMA</span>
+              <!-- Student 3: Dimas -->
+              <div class="student-card">
+                <img class="student-thumb" src="./assets/images/student-dimas.jpg" alt="Siswa Dimas" loading="lazy">
+                <div class="student-award">
+                  <span class="award-icon">🏆</span>
+                  <span class="award-title">Top 3<br>School Ranking SMA</span>
+                </div>
+                <div class="student-footer">
+                  <h4 class="student-name">Dimas</h4>
+                  <p class="student-quote">“Nilai saya naik signifikan!”</p>
+                </div>
               </div>
-              <div class="student-footer">
-                <h4 class="student-name">Dimas</h4>
-                <p class="student-quote">“Nilai saya naik signifikan!”</p>
-              </div>
-            </div>
 
-            <!-- Student 4 -->
-            <div class="student-card">
-              <img class="student-thumb" src="./assets/images/student-alya.jpg" alt="Siswa Alya">
-              <div class="student-award">
-                <span class="award-icon">🏅</span>
-                <span class="award-title">Finalist<br>Mathematics Olympiad Provincial</span>
+              <!-- Student 4: Alya -->
+              <div class="student-card">
+                <img class="student-thumb" src="./assets/images/student-alya.jpg" alt="Siswa Alya" loading="lazy">
+                <div class="student-award">
+                  <span class="award-icon">🏅</span>
+                  <span class="award-title">Finalist<br>Mathematics Olympiad Provincial</span>
+                </div>
+                <div class="student-footer">
+                  <h4 class="student-name">Alya</h4>
+                  <p class="student-quote">“Dibimbing dengan sabar dan terarah.”</p>
+                </div>
               </div>
-              <div class="student-footer">
-                <h4 class="student-name">Alya</h4>
-                <p class="student-quote">“Dibimbing dengan sabar dan terarah.”</p>
+
+              <!-- Student 5: Bintang -->
+              <div class="student-card">
+                <img class="student-thumb" src="./assets/images/student-bintang.jpg" alt="Siswa Bintang" loading="lazy">
+                <div class="student-award">
+                  <span class="award-icon">🎓</span>
+                  <span class="award-title">Lolos SNBT<br>Fakultas Kedokteran PTN</span>
+                </div>
+                <div class="student-footer">
+                  <h4 class="student-name">Bintang</h4>
+                  <p class="student-quote">“Strategi belajarnya sangat aplikatif dan fokus.”</p>
+                </div>
               </div>
+
+              <!-- Student 6: Zahra -->
+              <div class="student-card">
+                <img class="student-thumb" src="./assets/images/student-zahra.jpg" alt="Siswa Zahra" loading="lazy">
+                <div class="student-award">
+                  <span class="award-icon">🥇</span>
+                  <span class="award-title">Juara 1<br>OSN Fisika Tingkat Kota</span>
+                </div>
+                <div class="student-footer">
+                  <h4 class="student-name">Zahra</h4>
+                  <p class="student-quote">“Konsep fisika jadi terasa sangat logis.”</p>
+                </div>
+              </div>
+
+              <!-- Student 7: Farhan -->
+              <div class="student-card">
+                <img class="student-thumb" src="./assets/images/student-farhan.jpg" alt="Siswa Farhan" loading="lazy">
+                <div class="student-award">
+                  <span class="award-icon">📈</span>
+                  <span class="award-title">Skor 740+<br>Penalaran Matematika UTBK</span>
+                </div>
+                <div class="student-footer">
+                  <h4 class="student-name">Farhan</h4>
+                  <p class="student-quote">“Latihan soal & trik cepatnya super jelas!”</p>
+                </div>
+              </div>
+
+              <!-- Student 8: Kirana -->
+              <div class="student-card">
+                <img class="student-thumb" src="./assets/images/student-kirana.jpg" alt="Siswa Kirana" loading="lazy">
+                <div class="student-award">
+                  <span class="award-icon">⭐</span>
+                  <span class="award-title">Nilai 95<br>Ujian Akhir Sekolah Matematika</span>
+                </div>
+                <div class="student-footer">
+                  <h4 class="student-name">Kirana</h4>
+                  <p class="student-quote">“Sesi privat yang selalu saya tunggu tiap minggu.”</p>
+                </div>
+              </div>
+
             </div>
           </div>
 
