@@ -4027,3 +4027,650 @@ button {
     padding: 14px 16px;
   }
 }
+
+/* ==================== SECTION 03: EDUCATION & PERSONAL ACHIEVEMENTS ==================== */
+.education-section {
+  padding: 100px 0 110px;
+  background-color: #F8F5EE; /* Warm paper / ivory parchment */
+  border-top: 1px solid var(--border-light);
+  position: relative;
+  overflow: hidden;
+  scroll-margin-top: 85px;
+}
+
+/* 2-Column Main Layout */
+.edu-achieve-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.28fr;
+  gap: 52px;
+  align-items: start;
+}
+
+/* --- Left Column: Education Background --- */
+.edu-col-left {
+  display: flex;
+  flex-direction: column;
+}
+
+.edu-header {
+  margin-bottom: 28px;
+}
+
+.edu-header .section-number {
+  display: inline-block;
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--text-subtle);
+  margin-bottom: 8px;
+  letter-spacing: 0.05em;
+}
+
+.edu-sublabel {
+  display: block;
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  font-weight: 700;
+  color: #8C6239;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.edu-title {
+  font-family: var(--font-serif);
+  font-size: clamp(2.2rem, 3.4vw, 2.9rem);
+  font-weight: 500;
+  line-height: 1.15;
+  color: var(--text-dark);
+  letter-spacing: -0.02em;
+  margin-bottom: 12px;
+}
+
+.edu-desc {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--text-muted);
+  max-width: 480px;
+}
+
+/* Vertical Timeline */
+.edu-timeline {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 36px;
+}
+
+.edu-timeline::before {
+  content: '';
+  position: absolute;
+  left: 109px;
+  top: 24px;
+  bottom: 24px;
+  width: 1.5px;
+  background-color: #DFD4C4;
+  z-index: 1;
+}
+
+.edu-timeline-item {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  z-index: 2;
+}
+
+.edu-time-year {
+  width: 95px;
+  text-align: right;
+  flex-shrink: 0;
+  padding-top: 15px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #7B756D;
+  letter-spacing: -0.01em;
+}
+
+.edu-timeline-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #8C6239;
+  border: 2px solid #F8F5EE;
+  box-shadow: 0 0 0 1.5px #BFA890;
+  margin-top: 18px;
+  flex-shrink: 0;
+  z-index: 3;
+}
+
+.edu-card {
+  flex: 1;
+  background-color: #FFFFFF;
+  border: 1px solid #ECE5DA;
+  border-radius: 18px;
+  padding: 13px 18px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  box-shadow: 0 2px 6px rgba(28, 27, 24, 0.02);
+  transition: all var(--transition-normal);
+}
+
+.edu-card:hover {
+  transform: translateY(-2px);
+  border-color: #DFD5C6;
+  box-shadow: 0 8px 18px rgba(28, 27, 24, 0.05);
+}
+
+.edu-card-icon-wrap {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background-color: #F8F5EE;
+  border: 1px solid #EFE8DD;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #8C6239;
+  flex-shrink: 0;
+}
+
+.edu-card-info {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  flex: 1;
+  min-width: 0;
+}
+
+.edu-card-degree {
+  font-family: var(--font-serif);
+  font-size: 0.98rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin: 0;
+  line-height: 1.3;
+}
+
+.edu-card-school {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  margin: 0;
+  line-height: 1.35;
+}
+
+.edu-badges-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 4px;
+}
+
+.edu-badge-tag {
+  display: inline-block;
+  font-size: 0.68rem;
+  font-weight: 600;
+  color: #7A552F;
+  background-color: #FAF8F4;
+  border: 1px solid #EADBCC;
+  padding: 2px 9px;
+  border-radius: 100px;
+  line-height: 1.35;
+}
+
+/* Bottom Quote Row */
+.edu-bottom-quote-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding-top: 8px;
+}
+
+.edu-quote-left {
+  flex: 1;
+  border-left: 2.5px solid var(--text-dark);
+  padding-left: 16px;
+}
+
+.edu-quote-text {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 0.94rem;
+  line-height: 1.5;
+  color: var(--text-dark);
+  margin: 0;
+}
+
+.edu-quote-handwritten {
+  font-family: var(--font-hand);
+  font-size: 1.4rem;
+  line-height: 1.1;
+  color: #8C6239;
+  text-align: right;
+  transform: rotate(-5deg);
+  white-space: nowrap;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+.edu-quote-handwritten em {
+  font-style: italic;
+}
+
+/* --- Right Column: Recognitions & Milestones --- */
+.edu-col-right {
+  display: flex;
+  flex-direction: column;
+}
+
+.milestones-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  margin-bottom: 26px;
+}
+
+.milestones-kicker-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+  font-size: 0.66rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  color: var(--text-subtle);
+  line-height: 1.5;
+  padding-top: 8px;
+  flex-shrink: 0;
+}
+
+/* 4 Stats Cards Grid */
+.milestones-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  margin-bottom: 26px;
+}
+
+.m-stat-card {
+  background-color: #FFFFFF;
+  border: 1px solid #ECE5DA;
+  border-radius: 18px;
+  padding: 18px 14px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  box-shadow: 0 2px 6px rgba(28, 27, 24, 0.02);
+  transition: all var(--transition-normal);
+}
+
+.m-stat-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 18px rgba(28, 27, 24, 0.05);
+  border-color: #DFD5C6;
+}
+
+.m-stat-icon {
+  color: #8C6239;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.m-stat-number {
+  font-family: var(--font-serif);
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  line-height: 1.1;
+  margin-bottom: 5px;
+}
+
+.m-stat-label {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  line-height: 1.35;
+  font-weight: 500;
+}
+
+/* Lower Split: 5 Milestone Cards + Frame Visual */
+.milestones-content-split {
+  display: grid;
+  grid-template-columns: 1.25fr 1fr;
+  gap: 20px;
+  align-items: start;
+}
+
+/* 5 Milestone Cards Stack */
+.milestone-cards-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+
+.milestone-card-item {
+  background-color: #FFFFFF;
+  border: 1px solid #ECE5DA;
+  border-radius: 16px;
+  padding: 13px 15px;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  box-shadow: 0 2px 6px rgba(28, 27, 24, 0.02);
+  transition: all var(--transition-normal);
+}
+
+.milestone-card-item:hover {
+  transform: translateY(-2px);
+  border-color: #DFD5C6;
+  box-shadow: 0 6px 16px rgba(28, 27, 24, 0.05);
+}
+
+.m-badge-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: #F8F5EE;
+  border: 1px solid #EADBCC;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #8C6239;
+  flex-shrink: 0;
+}
+
+.m-card-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.m-card-top-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.m-card-title {
+  font-family: var(--font-serif);
+  font-size: 0.94rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.m-card-year {
+  font-size: 0.76rem;
+  font-weight: 600;
+  color: #8C6239;
+  flex-shrink: 0;
+}
+
+.m-card-desc {
+  font-size: 0.76rem;
+  color: var(--text-muted);
+  margin: 0;
+  line-height: 1.35;
+}
+
+.m-card-arrow {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background-color: #FAF8F4;
+  border: 1px solid #ECE5DA;
+  color: #8C6239;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.84rem;
+  text-decoration: none;
+  flex-shrink: 0;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.m-card-arrow:hover {
+  background-color: #8C6239;
+  color: #FFFFFF;
+  border-color: #8C6239;
+  transform: translateX(2px);
+}
+
+/* Right Sub-column Visual */
+.milestones-visual-col {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.milestone-frame-box {
+  width: 100%;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(28, 27, 24, 0.08);
+  border: 1px solid #ECE5DA;
+  background-color: #FFFFFF;
+}
+
+.milestone-frame-img {
+  width: 100%;
+  height: 245px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.milestone-frame-box:hover .milestone-frame-img {
+  transform: scale(1.03);
+}
+
+.milestone-cta-card {
+  background-color: #FFFFFF;
+  border: 1px solid #ECE5DA;
+  border-radius: 16px;
+  padding: 14px 16px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: 0 2px 6px rgba(28, 27, 24, 0.02);
+  transition: all var(--transition-normal);
+}
+
+.milestone-cta-card:hover {
+  transform: translateY(-2px);
+  border-color: #8C6239;
+  box-shadow: 0 6px 18px rgba(140, 98, 57, 0.12);
+}
+
+.m-cta-icon-box {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  background-color: #F8F5EE;
+  border: 1px solid #EADBCC;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #8C6239;
+  flex-shrink: 0;
+}
+
+.m-cta-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex: 1;
+  min-width: 0;
+}
+
+.m-cta-title {
+  font-family: var(--font-serif);
+  font-size: 0.94rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  line-height: 1.25;
+}
+
+.m-cta-desc {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  line-height: 1.3;
+}
+
+.m-cta-arrow {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: #FAF8F4;
+  border: 1px solid #ECE5DA;
+  color: #8C6239;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.88rem;
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+
+.milestone-cta-card:hover .m-cta-arrow {
+  background-color: #8C6239;
+  color: #FFFFFF;
+  border-color: #8C6239;
+  transform: translateX(3px);
+}
+
+.milestone-motto-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  color: var(--text-subtle);
+  padding-top: 2px;
+}
+
+.m-dash-line {
+  width: 24px;
+  height: 1px;
+  background-color: var(--text-subtle);
+  flex-shrink: 0;
+}
+
+/* Responsive Rules for Education & Milestones */
+@media (max-width: 1120px) {
+  .edu-achieve-grid {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+
+  .milestones-content-split {
+    grid-template-columns: 1.2fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .education-section {
+    padding: 70px 0 75px;
+  }
+
+  .edu-achieve-grid {
+    gap: 50px;
+  }
+
+  .edu-timeline::before {
+    left: 89px;
+  }
+
+  .edu-time-year {
+    width: 75px;
+    font-size: 0.76rem;
+  }
+
+  .edu-bottom-quote-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+  }
+
+  .edu-quote-handwritten {
+    align-self: flex-end;
+    font-size: 1.2rem;
+  }
+
+  .milestones-header-row {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .milestones-kicker-right {
+    display: none;
+  }
+
+  .milestones-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .milestones-content-split {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .milestone-frame-img {
+    height: 220px;
+  }
+}
+
+@media (max-width: 480px) {
+  .edu-timeline::before {
+    display: none;
+  }
+
+  .edu-timeline-item {
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .edu-time-year {
+    width: auto;
+    text-align: left;
+    padding-top: 0;
+    color: #8C6239;
+    font-size: 0.8rem;
+  }
+
+  .edu-timeline-dot {
+    display: none;
+  }
+
+  .edu-card {
+    padding: 12px 14px;
+  }
+
+  .milestones-stats-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .m-stat-card {
+    padding: 14px 10px;
+  }
+
+  .m-stat-number {
+    font-size: 1.45rem;
+  }
+}
+
