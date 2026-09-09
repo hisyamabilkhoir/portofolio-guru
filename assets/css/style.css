@@ -2548,570 +2548,807 @@ button {
   transform: translateY(-2px);
 }
 
-/* ==================== CONTACT & SOCIAL MEDIA SECTION ==================== */
+/* ==================== CONTACT & SOCIAL MEDIA SECTION (MOCKUP ACCURATE) ==================== */
+/* ==================== CONTACT & SOCIAL MEDIA SECTION (MOCKUP ACCURATE) ==================== */
 .contact-section {
-  padding: 100px 0 90px;
-  background-color: var(--bg-soft);
+  padding: 100px 0 110px;
+  background-color: #F8F5EE; /* Warm paper / ivory parchment */
   border-top: 1px solid var(--border-light);
   position: relative;
+  overflow: hidden;
+  scroll-margin-top: 85px;
 }
 
-.contact-header-wrap {
-  max-width: 720px;
-  margin: 0 auto 55px;
+/* Header Top */
+.mockup-header-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 30px;
+  margin-bottom: 48px;
 }
 
-.contact-grid {
+.mockup-header-left {
+  max-width: 620px;
+}
+
+.mockup-num-tag {
+  display: inline-block;
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--text-subtle);
+  margin-bottom: 12px;
+  letter-spacing: 0.05em;
+}
+
+.mockup-hero-title {
+  font-family: var(--font-serif);
+  font-size: clamp(2.4rem, 3.8vw, 3.2rem);
+  font-weight: 500;
+  line-height: 1.15;
+  color: var(--text-dark);
+  letter-spacing: -0.02em;
+  margin-bottom: 16px;
+}
+
+.mockup-hero-desc {
+  font-size: 0.98rem;
+  line-height: 1.6;
+  color: var(--text-muted);
+  max-width: 540px;
+}
+
+.mockup-header-kicker {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  color: var(--text-subtle);
+  line-height: 1.5;
+  padding-top: 10px;
+}
+
+/* Grid Layout */
+.contact-mockup-grid {
   display: grid;
-  grid-template-columns: 1fr 1.28fr;
-  gap: 40px;
+  grid-template-columns: 1fr 1.22fr;
+  gap: 38px;
   align-items: start;
 }
 
-/* --- Left Column: Info & Channels --- */
-.contact-info-col {
+/* --- Left Column --- */
+.contact-left-col {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
-/* Profile Mini Card */
-.contact-profile-card {
+/* 1. Profile Card */
+.mockup-profile-card {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 22px 24px;
+  background-color: #ECE5DA; /* Warm beige container */
+  border: 1px solid rgba(210, 198, 180, 0.6);
+  border-radius: 20px;
+  position: relative;
+}
+
+.mockup-profile-main {
   display: flex;
   align-items: center;
-  gap: 16px;
-  padding: 18px 22px;
-  background-color: #FFFFFF;
-  border: 1px solid var(--border-light);
-  border-radius: 20px;
-  box-shadow: var(--shadow-sm);
+  gap: 18px;
+  width: 100%;
 }
 
-.contact-avatar-wrap {
-  position: relative;
-  width: 62px;
-  height: 62px;
+.mockup-avatar-wrap {
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  overflow: hidden;
   flex-shrink: 0;
+  border: 2px solid #FFFFFF;
+  box-shadow: 0 4px 12px rgba(28, 27, 24, 0.08);
 }
 
-.contact-avatar-img {
+.mockup-avatar-img {
   width: 100%;
   height: 100%;
-  border-radius: 50%;
   object-fit: cover;
-  border: 2px solid var(--color-bronze);
 }
 
-.status-online-dot {
-  position: absolute;
-  bottom: 1px;
-  right: 1px;
-  width: 15px;
-  height: 15px;
-  background-color: #25D366;
-  border: 2.5px solid #FFFFFF;
-  border-radius: 50%;
-  box-shadow: 0 0 0 2px rgba(37, 211, 102, 0.35);
-}
-
-.contact-profile-info {
+.mockup-profile-details {
   display: flex;
   flex-direction: column;
 }
 
-.contact-profile-name {
-  font-size: 1.05rem;
+.mockup-profile-name {
+  font-size: 1.08rem;
   font-weight: 700;
   color: var(--text-dark);
-  margin-bottom: 2px;
+  margin-bottom: 3px;
 }
 
-.contact-profile-role {
+.mockup-profile-role {
   font-size: 0.78rem;
   color: var(--text-muted);
-  margin-bottom: 6px;
 }
 
-.contact-availability-badge {
+.mockup-badges-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  width: 100%;
+}
+
+.mockup-badge-pill {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
+  gap: 5px;
   font-size: 0.72rem;
   font-weight: 600;
-  color: #15803d;
-  background-color: #DCFCE7;
-  padding: 3px 10px;
+  color: #7A552F;
+  background-color: rgba(255, 255, 255, 0.75);
+  border: 1px solid rgba(160, 114, 72, 0.2);
+  padding: 4px 10px;
   border-radius: 100px;
-  width: fit-content;
+  white-space: nowrap;
 }
 
-.badge-pulse {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background-color: #22c55e;
-  animation: pulse 1.8s infinite;
+.mockup-badge-pill svg {
+  color: var(--color-bronze);
+  flex-shrink: 0;
 }
 
-@keyframes pulse {
-  0% { transform: scale(0.95); opacity: 0.8; }
-  50% { transform: scale(1.3); opacity: 1; }
-  100% { transform: scale(0.95); opacity: 0.8; }
+.mockup-cursive-quote {
+  position: absolute;
+  top: 18px;
+  right: 22px;
+  font-family: var(--font-hand);
+  font-size: 1.35rem;
+  line-height: 1.08;
+  color: #8C6239;
+  text-align: right;
+  transform: rotate(-3deg);
+  white-space: nowrap;
+  font-weight: 600;
+  pointer-events: none;
 }
 
-/* Direct Channels */
-.contact-channels-list {
+.mockup-cursive-quote span {
+  font-style: italic;
+}
+
+/* 2. Direct Channels (3 Cards) */
+.mockup-channels-stack {
   display: flex;
   flex-direction: column;
   gap: 12px;
 }
 
-.channel-card {
+.mockup-channel-item {
   display: flex;
   align-items: center;
   gap: 16px;
   padding: 16px 20px;
   background-color: #FFFFFF;
-  border: 1px solid var(--border-light);
+  border: 1px solid #ECE5DA;
   border-radius: 18px;
   text-decoration: none;
   color: inherit;
   transition: all var(--transition-normal);
+  box-shadow: 0 2px 6px rgba(28, 27, 24, 0.02);
 }
 
-.channel-card:hover {
+.mockup-channel-item:hover {
   transform: translateY(-2px);
   border-color: var(--color-bronze);
   box-shadow: var(--shadow-sm);
 }
 
-.channel-card.channel-wa:hover {
+.mockup-channel-item.channel-item-wa:hover {
   border-color: #25D366;
-  box-shadow: 0 8px 22px rgba(37, 211, 102, 0.15);
+  box-shadow: 0 6px 18px rgba(37, 211, 102, 0.12);
 }
 
-.channel-icon-box {
-  width: 44px;
-  height: 44px;
-  border-radius: 12px;
-  background-color: #F6F3EC;
+.mockup-channel-icon-wrap {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--color-bronze);
   flex-shrink: 0;
   transition: all var(--transition-fast);
 }
 
-.channel-icon-wa {
+.mockup-channel-icon-wrap.icon-wa {
   background-color: #E7F9ED;
   color: #25D366;
 }
 
-.channel-card:hover .channel-icon-box {
+.mockup-channel-icon-wrap.icon-brown {
+  background-color: #F8F5EE;
+  color: #8C6239;
+  border: 1px solid #ECE5DA;
+}
+
+.mockup-channel-item:hover .icon-brown {
   background-color: var(--color-bronze);
   color: #FFFFFF;
 }
 
-.channel-card.channel-wa:hover .channel-icon-box {
+.mockup-channel-item.channel-item-wa:hover .icon-wa {
   background-color: #25D366;
   color: #FFFFFF;
 }
 
-.channel-detail {
+.mockup-channel-info {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
 }
 
-.channel-label {
+.mockup-channel-badge-label {
   font-size: 0.72rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
   color: var(--text-subtle);
+  font-weight: 500;
+  margin-bottom: 2px;
 }
 
-.channel-value {
-  font-size: 0.95rem;
+.mockup-channel-number {
+  font-size: 1.02rem;
   font-weight: 700;
   color: var(--text-dark);
-  margin: 2px 0;
+  letter-spacing: -0.01em;
 }
 
-.channel-sub {
-  font-size: 0.78rem;
+.mockup-channel-subtitle {
+  font-size: 0.76rem;
   color: var(--text-muted);
+  margin-top: 1px;
 }
 
-.channel-action-arrow {
+.mockup-channel-arrow-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid #EADBCC;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: var(--text-subtle);
-  transition: transform 0.2s, color 0.2s;
   flex-shrink: 0;
+  transition: all var(--transition-fast);
 }
 
-.channel-card:hover .channel-action-arrow {
-  transform: translateX(4px);
+.mockup-channel-item:hover .mockup-channel-arrow-btn {
+  border-color: var(--color-bronze);
   color: var(--color-bronze);
+  transform: translateX(3px);
 }
 
-.channel-card.static-card:hover {
+.mockup-channel-item.static-item:hover {
   transform: none;
-  border-color: var(--border-light);
-  box-shadow: none;
+  border-color: #ECE5DA;
+  box-shadow: 0 2px 6px rgba(28, 27, 24, 0.02);
 }
 
-.channel-card.static-card:hover .channel-icon-box {
-  background-color: #F6F3EC;
-  color: var(--color-bronze);
+.mockup-channel-item.static-item:hover .icon-brown {
+  background-color: #F8F5EE;
+  color: #8C6239;
 }
 
-/* Social Media Card */
-.contact-socials-card {
+.mockup-channel-item.static-item:hover .mockup-channel-arrow-btn {
+  border-color: #EADBCC;
+  color: var(--text-subtle);
+  transform: none;
+}
+
+/* 3. Media Sosial Card (1 Row 2 Data / 2 Columns Grid) */
+.mockup-social-card {
   background-color: #FFFFFF;
-  border: 1px solid var(--border-light);
+  border: 1px solid #ECE5DA;
   border-radius: 20px;
-  padding: 22px 24px;
-  box-shadow: var(--shadow-sm);
+  padding: 24px 24px;
+  box-shadow: 0 2px 8px rgba(28, 27, 24, 0.03);
 }
 
-.socials-card-header {
+.mockup-social-top {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 10px;
-  margin-bottom: 8px;
+  gap: 12px;
+  margin-bottom: 6px;
 }
 
-.socials-card-title {
-  font-size: 0.95rem;
+.mockup-social-heading {
+  font-size: 1.02rem;
   font-weight: 700;
   color: var(--text-dark);
+  letter-spacing: -0.01em;
 }
 
-.socials-card-badge {
-  font-size: 0.68rem;
+.mockup-social-pill-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.72rem;
   font-weight: 600;
-  background-color: #F6F3EC;
-  color: var(--color-bronze);
-  padding: 3px 10px;
+  color: #8C6239;
+  background-color: #F8F5EE;
+  border: 1px solid #E8DFD3;
+  padding: 4px 12px;
   border-radius: 100px;
+  text-decoration: none;
+  transition: all var(--transition-fast);
+  white-space: nowrap;
 }
 
-.socials-card-desc {
+.mockup-social-pill-btn:hover {
+  background-color: #ECE5DA;
+  color: var(--text-dark);
+  transform: translateY(-1px);
+}
+
+.mockup-social-intro {
   font-size: 0.8rem;
   color: var(--text-muted);
-  line-height: 1.45;
+  line-height: 1.5;
   margin-bottom: 16px;
 }
 
-.social-pills-grid {
+.mockup-social-2col-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 10px;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
 }
 
-.social-pill-link {
+.mockup-social-pill-item {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
   padding: 10px 14px;
   background-color: #FAF8F4;
-  border: 1px solid var(--border-light);
+  border: 1px solid #EFEAE1;
   border-radius: 14px;
   text-decoration: none;
   color: inherit;
   transition: all var(--transition-normal);
-  position: relative;
 }
 
-.social-pill-link:hover {
+.mockup-social-pill-item:hover {
   background-color: #FFFFFF;
   border-color: var(--color-bronze);
   transform: translateY(-2px);
-  box-shadow: var(--shadow-sm);
+  box-shadow: 0 4px 14px rgba(160, 114, 72, 0.1);
 }
 
-.social-pill-icon {
-  width: 34px;
-  height: 34px;
+.mockup-social-icon-box {
+  width: 36px;
+  height: 36px;
   border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+  transition: transform 0.2s ease;
 }
 
-.ig-color { background-color: #FDF2F4; color: #E1306C; }
-.in-color { background-color: #EDF4FB; color: #0A66C2; }
-.yt-color { background-color: #FEECEB; color: #FF0000; }
-.tt-color { background-color: #F0F2F5; color: #111111; }
+.mockup-social-pill-item:hover .mockup-social-icon-box {
+  transform: scale(1.06);
+}
 
-.social-pill-text {
+.ig-box { background-color: #FDF2F4; color: #E1306C; }
+.in-box { background-color: #EDF4FB; color: #0A66C2; }
+.yt-box { background-color: #FEECEB; color: #FF0000; }
+.tt-box { background-color: #F0F2F5; color: #111111; }
+
+.mockup-social-text-box {
   display: flex;
   flex-direction: column;
+  gap: 1px;
   overflow: hidden;
 }
 
-.social-pill-name {
-  font-size: 0.78rem;
+.mockup-social-platform {
+  font-size: 0.82rem;
   font-weight: 700;
   color: var(--text-dark);
 }
 
-.social-pill-handle {
-  font-size: 0.7rem;
+.mockup-social-username {
+  font-size: 0.72rem;
   color: var(--text-muted);
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
 }
 
-.social-pill-external {
-  margin-left: auto;
+/* 4. Bottom Quote Row */
+.mockup-bottom-quote-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 12px 0 0 16px;
+  border-left: 2px solid #1C1B18;
+  margin-top: 4px;
+}
+
+.mockup-quote-italic {
+  font-family: var(--font-serif);
+  font-size: 1.18rem;
+  font-style: italic;
+  font-weight: 500;
+  color: var(--text-dark);
+  line-height: 1.35;
+}
+
+.mockup-quote-right-kicker {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
   color: var(--text-subtle);
-  opacity: 0.55;
+  line-height: 1.4;
+  white-space: nowrap;
   flex-shrink: 0;
-  transition: opacity 0.2s, transform 0.2s;
 }
 
-.social-pill-link:hover .social-pill-external {
-  opacity: 1;
-  transform: translateX(2px);
-  color: var(--color-bronze);
-}
-
-/* --- Right Column: Interactive Form Card --- */
-.contact-form-card {
-  background-color: #FFFFFF;
-  border: 1px solid var(--border-light);
-  border-radius: 24px;
-  padding: 38px 36px;
-  box-shadow: var(--shadow-md);
+/* --- Right Column: Mockup Floating Form Card --- */
+.contact-right-col {
   position: relative;
 }
 
-.form-header {
-  margin-bottom: 26px;
+.mockup-form-floating-card {
+  background-color: #FFFFFF;
+  border: 1px solid #ECE5DA;
+  border-radius: 28px;
+  padding: 38px 36px;
+  box-shadow: 0 20px 45px rgba(28, 27, 24, 0.07);
+  position: relative;
+  z-index: 2;
 }
 
-.form-badge-pill {
+.mockup-form-top-badge {
   display: inline-flex;
   align-items: center;
   gap: 6px;
   font-size: 0.72rem;
   font-weight: 600;
-  color: var(--color-bronze);
+  color: #8C6239;
   background-color: #F8F5EE;
+  border: 1px solid #EADCCB;
   padding: 4px 12px;
   border-radius: 100px;
-  margin-bottom: 12px;
-  border: 1px solid #EADBCC;
+  margin-bottom: 16px;
 }
 
-.form-badge-pill .badge-dot {
+.mockup-form-top-badge .badge-dot-brown {
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background-color: var(--color-bronze);
+  background-color: #8C6239;
 }
 
-.form-card-title {
+.mockup-form-main-title {
   font-family: var(--font-serif);
-  font-size: 1.6rem;
+  font-size: 1.68rem;
   font-weight: 600;
   color: var(--text-dark);
   margin-bottom: 8px;
-  line-height: 1.25;
+  letter-spacing: -0.01em;
 }
 
-.form-card-subtitle {
-  font-size: 0.85rem;
-  color: var(--text-muted);
+.mockup-form-main-desc {
+  font-size: 0.84rem;
   line-height: 1.5;
+  color: var(--text-muted);
+  margin-bottom: 24px;
 }
 
-.contact-main-form {
+.mockup-form-body {
   display: flex;
   flex-direction: column;
   gap: 18px;
 }
 
-.form-grid-2 {
+.mockup-form-row-2 {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 16px;
+  gap: 14px;
 }
 
-.contact-main-form .form-group {
+.mockup-field-wrap {
   display: flex;
   flex-direction: column;
   gap: 6px;
 }
 
-.contact-main-form .form-label {
+.mockup-field-label {
   font-size: 0.82rem;
   font-weight: 600;
   color: var(--text-dark);
 }
 
-.required-star {
+.star-red {
   color: #DC2626;
   margin-left: 2px;
 }
 
-.input-with-icon {
+.mockup-input-inner {
   position: relative;
   display: flex;
   align-items: center;
 }
 
-.field-icon {
+.mockup-input-icon {
   position: absolute;
   left: 14px;
   color: var(--text-subtle);
   pointer-events: none;
 }
 
-.input-with-icon .form-input {
-  padding-left: 42px;
-}
-
-.contact-main-form .form-input,
-.contact-main-form .form-select,
-.contact-main-form .form-textarea {
+.mockup-text-input,
+.mockup-select-input {
   width: 100%;
-  padding: 12px 14px;
-  border: 1px solid var(--border-light);
+  padding: 12px 14px 12px 42px;
+  border: 1px solid #E8E2D6;
   border-radius: 12px;
-  font-size: 0.88rem;
+  font-size: 0.86rem;
   font-family: inherit;
   color: var(--text-dark);
-  background-color: #FAF9F6;
+  background-color: #FAF8F4;
   transition: all var(--transition-fast);
 }
 
-.contact-main-form .form-input:focus,
-.contact-main-form .form-select:focus,
-.contact-main-form .form-textarea:focus {
+.mockup-select-input {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%2398948B' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  padding-right: 36px;
+  cursor: pointer;
+}
+
+.mockup-text-input:focus,
+.mockup-select-input:focus {
   outline: none;
   background-color: #FFFFFF;
-  border-color: var(--color-bronze);
+  border-color: #A07248;
   box-shadow: 0 0 0 3px rgba(160, 114, 72, 0.12);
 }
 
-/* Mode Radios */
-.mode-radios-group {
+/* 3 Mode Cards */
+.mockup-mode-3grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 10px;
-  margin-top: 4px;
+  margin-top: 2px;
 }
 
-.mode-radio-card {
+.mockup-mode-card {
   display: block;
   position: relative;
   cursor: pointer;
 }
 
-.mode-radio-card input {
+.mockup-mode-card input {
   position: absolute;
   opacity: 0;
   pointer-events: none;
 }
 
-.mode-radio-content {
-  padding: 12px 10px;
-  border: 1.5px solid var(--border-light);
+.mockup-mode-content {
+  padding: 12px 12px;
+  border: 1.5px solid #E8E2D6;
   border-radius: 14px;
-  background-color: #FAF9F6;
+  background-color: #FAF8F4;
   transition: all var(--transition-normal);
   display: flex;
   flex-direction: column;
-  text-align: center;
-  gap: 2px;
+  gap: 3px;
 }
 
-.mode-radio-card:hover .mode-radio-content {
-  border-color: var(--border-medium);
+.mockup-mode-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2px;
+}
+
+.mockup-mode-icon {
+  color: #7A552F;
+}
+
+.mockup-radio-indicator {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 1.5px solid #C4BCB0;
+  display: inline-block;
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.mockup-mode-card:hover .mockup-mode-content {
   background-color: #FFFFFF;
+  border-color: #D2C8BA;
 }
 
-.mode-radio-card input:checked + .mode-radio-content {
+.mockup-mode-card input:checked + .mockup-mode-content {
   background-color: #FFFDF9;
-  border-color: var(--color-bronze);
-  box-shadow: 0 4px 14px rgba(160, 114, 72, 0.14);
+  border-color: #9C6F43;
+  box-shadow: 0 4px 14px rgba(156, 111, 67, 0.12);
 }
 
-.mode-radio-title {
+.mockup-mode-card input:checked + .mockup-mode-content .mockup-radio-indicator {
+  border-color: #9C6F43;
+  background-color: #9C6F43;
+  box-shadow: inset 0 0 0 2.5px #FFFFFF;
+}
+
+.mockup-mode-name {
   font-size: 0.78rem;
   font-weight: 700;
   color: var(--text-dark);
 }
 
-.mode-radio-card input:checked + .mode-radio-content .mode-radio-title {
-  color: var(--color-bronze);
+.mockup-mode-card input:checked + .mockup-mode-content .mockup-mode-name {
+  color: #845A34;
 }
 
-.mode-radio-desc {
+.mockup-mode-desc {
   font-size: 0.68rem;
   color: var(--text-muted);
-  line-height: 1.2;
+  line-height: 1.25;
 }
 
-/* Submit Button */
-.btn-contact-submit {
+/* Textarea Box */
+.mockup-textarea-box {
+  position: relative;
+  border: 1px solid #E8E2D6;
+  border-radius: 14px;
+  background-color: #FAF8F4;
+  padding: 12px 14px 28px 42px;
+  transition: all var(--transition-fast);
+}
+
+.mockup-textarea-box:focus-within {
+  background-color: #FFFFFF;
+  border-color: #A07248;
+  box-shadow: 0 0 0 3px rgba(160, 114, 72, 0.12);
+}
+
+.mockup-textarea-icon {
+  position: absolute;
+  left: 14px;
+  top: 14px;
+  color: var(--text-subtle);
+  pointer-events: none;
+}
+
+.mockup-textarea-input {
+  width: 100%;
+  border: none;
+  background: transparent;
+  resize: vertical;
+  font-family: inherit;
+  font-size: 0.86rem;
+  color: var(--text-dark);
+  outline: none;
+  min-height: 68px;
+}
+
+.mockup-textarea-counter {
+  position: absolute;
+  right: 14px;
+  bottom: 8px;
+  font-size: 0.7rem;
+  color: var(--text-subtle);
+}
+
+/* Submit Button (Dark Charcoal as in Mockup) */
+.mockup-submit-btn {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
   width: 100%;
   padding: 15px 24px;
-  background-color: #25D366;
+  background-color: #1C1B18; /* Dark charcoal button from mockup */
   color: #FFFFFF;
   border: none;
   border-radius: 14px;
-  font-size: 0.95rem;
+  font-size: 0.94rem;
   font-weight: 700;
   cursor: pointer;
   transition: all var(--transition-normal);
-  box-shadow: 0 6px 18px rgba(37, 211, 102, 0.28);
-  margin-top: 6px;
+  box-shadow: 0 8px 20px rgba(28, 27, 24, 0.22);
+  margin-top: 4px;
 }
 
-.btn-contact-submit:hover {
-  background-color: #20BA5A;
+.mockup-submit-btn:hover {
+  background-color: #8C6239; /* Warm bronze hover */
   transform: translateY(-2px);
-  box-shadow: 0 10px 24px rgba(37, 211, 102, 0.38);
+  box-shadow: 0 12px 26px rgba(140, 98, 57, 0.28);
 }
 
-.btn-contact-submit .btn-wa-icon {
-  flex-shrink: 0;
-}
-
-.btn-contact-submit .btn-arrow-icon {
-  flex-shrink: 0;
+.mockup-submit-arrow {
   transition: transform 0.2s;
 }
 
-.btn-contact-submit:hover .btn-arrow-icon {
+.mockup-submit-btn:hover .mockup-submit-arrow {
   transform: translateX(4px);
 }
 
-.form-privacy-note {
+/* Security Note */
+.mockup-security-note {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
-  font-size: 0.75rem;
+  font-size: 0.74rem;
   color: var(--text-subtle);
   text-align: center;
   margin-top: 4px;
 }
 
-.form-privacy-note svg {
+.mockup-security-note svg {
   flex-shrink: 0;
-  color: #16a34a;
+  color: #15803D;
+}
+
+/* Side Books Visual (Composite Mockup Element) */
+.mockup-side-books-visual {
+  display: none; /* Shown on wider screens */
+}
+
+@media (min-width: 1200px) {
+  .mockup-side-books-visual {
+    display: block;
+    position: absolute;
+    right: -40px;
+    bottom: -15px;
+    z-index: 1;
+    pointer-events: none;
+    opacity: 0.75;
+  }
+
+  .mockup-stacked-books {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .mockup-book-spine {
+    background-color: #FAF8F4;
+    border: 1px solid #E2D9CB;
+    border-radius: 6px;
+    padding: 6px 14px;
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: #847C71;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
+    letter-spacing: 0.03em;
+  }
+
+  .mockup-side-handwriting {
+    font-family: var(--font-hand);
+    font-size: 1.25rem;
+    color: #9C6F43;
+    line-height: 1.15;
+    margin-top: 14px;
+    transform: rotate(5deg);
+  }
 }
 
 /* --- FOOTER --- */
@@ -3511,13 +3748,15 @@ button {
     grid-template-columns: 1fr;
   }
 
+  .contact-mockup-grid,
   .contact-grid {
     grid-template-columns: 1fr;
     gap: 36px;
   }
 
+  .mockup-form-floating-card,
   .contact-form-card {
-    padding: 32px 26px;
+    padding: 32px 24px;
   }
 
   .method-stepper {
@@ -3760,50 +3999,75 @@ button {
     text-align: center;
   }
 
-  /* Contact Section Mobile */
+  /* Contact Section Mobile (Mockup Accurate) */
   .contact-section {
-    padding: 70px 0 60px;
+    padding: 65px 0 55px;
   }
 
-  .contact-header-wrap {
-    margin-bottom: 38px;
+  .mockup-header-wrapper {
+    flex-direction: column;
+    gap: 14px;
+    margin-bottom: 32px;
   }
 
-  .contact-form-card {
+  .mockup-header-kicker {
+    display: none;
+  }
+
+  .mockup-hero-title {
+    font-size: 2.1rem;
+  }
+
+  .mockup-profile-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 18px 16px;
+  }
+
+  .mockup-profile-main {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+  }
+
+  .mockup-cursive-quote {
+    position: static;
+    align-self: flex-end;
+    font-size: 1.2rem;
+  }
+
+  .mockup-form-floating-card {
     padding: 24px 18px;
     border-radius: 20px;
   }
 
-  .form-card-title {
-    font-size: 1.35rem;
+  .mockup-form-main-title {
+    font-size: 1.38rem;
   }
 
-  .form-grid-2 {
+  .mockup-form-row-2 {
     grid-template-columns: 1fr;
     gap: 14px;
   }
 
-  .mode-radios-group {
+  .mockup-mode-3grid {
     grid-template-columns: 1fr;
     gap: 8px;
   }
 
-  .mode-radio-content {
+  .mockup-bottom-quote-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .mockup-quote-right-kicker {
     text-align: left;
-    padding: 10px 14px;
   }
 
-  .social-pills-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .btn-contact-submit {
-    font-size: 0.86rem;
-    padding: 14px 16px;
-    flex-wrap: wrap;
-  }
-
-  .contact-profile-card {
+  .mockup-submit-btn {
+    font-size: 0.88rem;
     padding: 14px 16px;
   }
 }

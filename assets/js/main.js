@@ -256,6 +256,15 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // Live character counter for contact form textarea
+  const contactMessage = document.getElementById('contactMessage');
+  const cCharCount = document.getElementById('cCharCount');
+  if (contactMessage && cCharCount) {
+    contactMessage.addEventListener('input', () => {
+      cCharCount.textContent = `${contactMessage.value.length}/300`;
+    });
+  }
+
   // --- 6. ARTICLE DETAILS MODAL ---
   const articleModal = document.getElementById('articleModal');
   const articleCards = document.querySelectorAll('.article-card');
