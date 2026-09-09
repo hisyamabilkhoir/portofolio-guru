@@ -4031,7 +4031,7 @@ button {
 /* ==================== SECTION 03: EDUCATION & PERSONAL ACHIEVEMENTS ==================== */
 .education-section {
   padding: 100px 0 110px;
-  background-color: #ECE5DA; /* Warm beige / light brown editorial paper tone */
+  background: linear-gradient(90deg, #FFFFFF 50%, #ECE5DA 50%); /* Kiri Putih, Kanan Coklat */
   border-top: 1px solid var(--border-light);
   border-bottom: 1px solid var(--border-light);
   position: relative;
@@ -4042,15 +4042,37 @@ button {
 /* 2-Column Main Layout */
 .edu-achieve-grid {
   display: grid;
-  grid-template-columns: 1fr 1.28fr;
-  gap: 52px;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
   align-items: start;
+  position: relative;
 }
 
-/* --- Left Column: Education Background --- */
+/* Center book crease divider between left & right pages */
+.edu-achieve-grid::before {
+  content: '';
+  position: absolute;
+  top: -20px;
+  bottom: -20px;
+  left: 50%;
+  width: 1px;
+  background: linear-gradient(180deg, transparent 0%, rgba(140, 98, 57, 0.22) 12%, rgba(140, 98, 57, 0.22) 88%, transparent 100%);
+  box-shadow: -2px 0 8px rgba(0, 0, 0, 0.04);
+  z-index: 4;
+}
+
+/* --- Left Column: Education Background (White Page) --- */
 .edu-col-left {
   display: flex;
   flex-direction: column;
+  padding-right: 48px;
+}
+
+/* --- Right Column: Recognitions & Milestones (Brown Page) --- */
+.edu-col-right {
+  display: flex;
+  flex-direction: column;
+  padding-left: 48px;
 }
 
 .edu-header {
@@ -4570,33 +4592,87 @@ button {
 }
 
 /* Responsive Rules for Education & Milestones */
-@media (max-width: 1120px) {
+@media (max-width: 992px) {
+  .education-section {
+    background: #ECE5DA; /* Bottom stays brown */
+    padding: 0;
+  }
+
   .edu-achieve-grid {
     grid-template-columns: 1fr;
-    gap: 60px;
+    gap: 0;
+  }
+
+  .edu-achieve-grid::before {
+    display: none;
+  }
+
+  .edu-col-left {
+    background-color: #FFFFFF; /* Top (Education) stays White */
+    padding: 70px var(--container-padding) 60px;
+    margin: 0 calc(-1 * var(--container-padding));
+    border-bottom: 1px solid #DFD7CA;
+  }
+
+  .edu-col-right {
+    background-color: #ECE5DA; /* Bottom (Milestones) stays Brown */
+    padding: 60px 0 75px;
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .milestones-content-split {
     grid-template-columns: 1.2fr 1fr;
+    gap: 20px;
   }
 }
 
 @media (max-width: 768px) {
-  .education-section {
-    padding: 70px 0 75px;
+  .edu-col-left {
+    padding: 55px var(--container-padding) 50px;
   }
 
-  .edu-achieve-grid {
-    gap: 50px;
+  .edu-col-right {
+    padding: 45px 0 60px;
+  }
+
+  .edu-timeline {
+    padding-left: 12px;
   }
 
   .edu-timeline::before {
-    left: 89px;
+    left: 4px;
+    top: 10px;
+    bottom: 10px;
+  }
+
+  .edu-timeline-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+    padding-left: 18px;
+    position: relative;
+  }
+
+  .edu-timeline-dot {
+    position: absolute;
+    left: -12px;
+    top: 4px;
+    margin-top: 0;
   }
 
   .edu-time-year {
-    width: 75px;
-    font-size: 0.76rem;
+    width: auto;
+    text-align: left;
+    padding-top: 0;
+    font-size: 0.78rem;
+    color: #8C6239;
+    font-weight: 700;
+  }
+
+  .edu-card {
+    width: 100%;
+    padding: 12px 14px;
   }
 
   .edu-bottom-quote-row {
@@ -4635,31 +4711,6 @@ button {
 }
 
 @media (max-width: 480px) {
-  .edu-timeline::before {
-    display: none;
-  }
-
-  .edu-timeline-item {
-    flex-direction: column;
-    gap: 6px;
-  }
-
-  .edu-time-year {
-    width: auto;
-    text-align: left;
-    padding-top: 0;
-    color: #8C6239;
-    font-size: 0.8rem;
-  }
-
-  .edu-timeline-dot {
-    display: none;
-  }
-
-  .edu-card {
-    padding: 12px 14px;
-  }
-
   .milestones-stats-grid {
     grid-template-columns: 1fr 1fr;
     gap: 10px;
