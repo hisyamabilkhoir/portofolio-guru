@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const hamburgerBtn = document.querySelector('.hamburger-btn');
   const navMenu = document.querySelector('.navbar-menu');
   const navLinks = document.querySelectorAll('.nav-link');
+  const navBackdrop = document.querySelector('.navbar-backdrop');
 
   window.addEventListener('scroll', () => {
     if (window.scrollY > 40) {
@@ -18,27 +19,51 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
+  const closeMobileMenu = () => {
+    if (hamburgerBtn) hamburgerBtn.classList.remove('active');
+    if (navMenu) navMenu.classList.remove('active');
+    if (navBackdrop) navBackdrop.classList.remove('active');
+    document.body.classList.remove('menu-open');
+  };
+
+  const openMobileMenu = () => {
+    if (hamburgerBtn) hamburgerBtn.classList.add('active');
+    if (navMenu) navMenu.classList.add('active');
+    if (navBackdrop) navBackdrop.classList.add('active');
+    document.body.classList.add('menu-open');
+  };
+
   if (hamburgerBtn && navMenu) {
-    hamburgerBtn.addEventListener('click', () => {
-      hamburgerBtn.classList.toggle('active');
-      navMenu.classList.toggle('active');
-      document.body.classList.toggle('menu-open');
+    hamburgerBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      if (navMenu.classList.contains('active')) {
+        closeMobileMenu();
+      } else {
+        openMobileMenu();
+      }
     });
+
+    if (navBackdrop) {
+      navBackdrop.addEventListener('click', closeMobileMenu);
+    }
 
     navLinks.forEach(link => {
       link.addEventListener('click', () => {
-        hamburgerBtn.classList.remove('active');
-        navMenu.classList.remove('active');
-        document.body.classList.remove('menu-open');
+        closeMobileMenu();
       });
     });
 
     // Close menu when clicking outside
     document.addEventListener('click', (e) => {
-      if (!navMenu.contains(e.target) && !hamburgerBtn.contains(e.target) && navMenu.classList.contains('active')) {
-        hamburgerBtn.classList.remove('active');
-        navMenu.classList.remove('active');
-        document.body.classList.remove('menu-open');
+      if (navMenu.classList.contains('active') && !navMenu.contains(e.target) && !hamburgerBtn.contains(e.target)) {
+        closeMobileMenu();
+      }
+    });
+
+    // Close menu on Escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && navMenu.classList.contains('active')) {
+        closeMobileMenu();
       }
     });
   }

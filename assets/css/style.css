@@ -60,6 +60,9 @@ html {
   font-size: 16px;
   scrollbar-width: thin;
   scrollbar-color: var(--color-bronze) var(--bg-soft);
+  overflow-x: hidden;
+  max-width: 100vw;
+  width: 100%;
 }
 
 /* --- CUSTOM BROWN / BRONZE SCROLLBAR --- */
@@ -96,7 +99,14 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
+  max-width: 100vw;
+  width: 100%;
   position: relative;
+}
+
+body.menu-open {
+  overflow: hidden;
+  touch-action: none;
 }
 
 /* Subtle background texture effect */
@@ -375,10 +385,35 @@ button {
   transition: 0.3s;
 }
 
+/* --- MOBILE NAV BACKDROP OVERLAY --- */
+.navbar-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  height: 100dvh;
+  background-color: rgba(28, 27, 24, 0.45);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.35s ease, visibility 0.35s ease;
+  z-index: 999;
+}
+
+.navbar-backdrop.active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
 /* --- HERO SECTION --- */
 .hero-section {
   padding: 70px 0 60px;
   position: relative;
+  overflow-x: clip;
 }
 
 .hero-grid {
@@ -3636,20 +3671,29 @@ button {
   .navbar-menu {
     position: fixed;
     top: 0;
-    right: -100%;
-    width: 280px;
+    right: 0;
+    width: 290px;
+    max-width: 82vw;
     height: 100vh;
+    height: 100dvh;
     background-color: #FFFFFF;
     flex-direction: column;
     align-items: flex-start;
-    padding: 80px 30px 40px;
-    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.1);
-    transition: right 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
+    padding: 85px 30px 40px;
+    box-shadow: -10px 0 35px rgba(28, 27, 24, 0.14);
+    transform: translateX(105%);
+    visibility: hidden;
+    pointer-events: none;
+    transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1), visibility 0.35s ease;
     z-index: 1001;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
   }
 
   .navbar-menu.active {
-    right: 0;
+    transform: translateX(0);
+    visibility: visible;
+    pointer-events: auto;
   }
 
   .hamburger-btn {
@@ -4778,6 +4822,15 @@ button {
 }
 
 @media (max-width: 480px) {
+  .navbar-actions {
+    gap: 10px;
+  }
+
+  .navbar-actions .btn {
+    padding: 8px 14px;
+    font-size: 0.82rem;
+  }
+
   .milestones-stats-grid {
     grid-template-columns: 1fr 1fr;
     gap: 10px;
