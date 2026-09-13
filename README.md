@@ -38,22 +38,18 @@ portofolio-guru/
 │   ├── js/
 │   │   └── main.js         # Interaktivitas (Navbar scrollspy, counter, modal, FAQ, slider)
 │   └── images/             # Seluruh aset fotografi lokal berkualitas tinggi
-│       ├── hero-teacher.jpg
-│       ├── about-books.jpg
-│       ├── subject-books.jpg
-│       ├── method-notebook.jpg
-│       ├── service-1.jpg
-│       ├── service-2.jpg
-│       ├── service-3.jpg
-│       ├── student-rafi.jpg
-│       ├── student-nadia.jpg
-│       ├── student-dimas.jpg
-│       ├── student-alya.jpg
-│       ├── testimonial-aulia.jpg
-│       ├── testimonial-rina.jpg
-│       ├── gallery-1.jpg s/d gallery-5.jpg
-│       ├── article-1.jpg s/d article-3.jpg
-│       └── cta-room.jpg
+│       ├── hero-teacher.webp
+│       ├── about-books.webp
+│       ├── subject-visual-stack.webp
+│       ├── subject-math.webp s/d subject-mentoring.webp
+│       ├── method-notebook.webp
+│       ├── recognition-frame.webp
+│       ├── service-1.webp s/d service-3.webp
+│       ├── student-rafi.webp s/d student-zahra.webp
+│       ├── testi-anwar.webp s/d testimonial-rina.webp
+│       ├── gallery-1.webp s/d gallery-5.webp
+│       ├── article-1.webp s/d article-3.webp
+│       └── cta-room.webp
 ```
 
 ---

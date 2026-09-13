@@ -289,7 +289,7 @@ document.addEventListener('DOMContentLoaded', () => {
       tag: 'Tips & Trik',
       author: 'Hisyam Abilkhoir A.Md.Kom',
       date: 'Selasa, 12 Agustus 2025',
-      image: './assets/images/article-1.jpg',
+      image: './assets/images/article-1.webp',
       content: `
         <p>Banyak siswa memandang matematika sebagai momok menakutkan karena pendekatan belajar yang terlalu menekankan hafalan rumus, bukan pemahaman logika dasar.</p>
         <p><strong>1. Kaitkan dengan Kehidupan Sehari-hari</strong><br>Bantu siswa memahami konsep hitung lewat contoh nyata: menghitung kembalian belanja, resep masakan, atau statistik skor olahraga favorit mereka.</p>
@@ -304,7 +304,7 @@ document.addEventListener('DOMContentLoaded', () => {
       tag: 'Olimpiade',
       author: 'Hisyam Abilkhoir A.Md.Kom',
       date: 'Minggu, 3 Agustus 2025',
-      image: './assets/images/article-2.jpg',
+      image: './assets/images/article-2.webp',
       content: `
         <p>Olimpiade Matematika (OSN / KSN) menuntut pemikiran kreatif non-konvensional yang jauh melampaui kurikulum sekolah standar.</p>
         <p><strong>Fondasi Logika yang Kuat</strong><br>Sebelum menyentuh soal-soal tingkat lanjut, pastikan 4 pilar dasar olimpiade (Aljabar, Geometri, Teori Bilangan, dan Kombinatorika) dikuasai secara komprehensif.</p>
@@ -317,7 +317,7 @@ document.addEventListener('DOMContentLoaded', () => {
       tag: 'Parenting',
       author: 'Hisyam Abilkhoir A.Md.Kom',
       date: 'Senin, 28 Juli 2025',
-      image: './assets/images/article-3.jpg',
+      image: './assets/images/article-3.webp',
       content: `
         <p>Dukungan emosional dari orang tua adalah katalis terbaik untuk kesuksesan akademis jangka panjang anak.</p>
         <p><strong>Ciptakan Lingkungan Belajar yang Nyaman</strong><br>Ruang belajar yang tenang, teratur, dan minim distraksi digital membantu daya fokus anak meningkat secara signifikan.</p>
